@@ -1,53 +1,61 @@
 {
-  "name": "remix-starter",
-  "version": "0.0.1",
-  "description": "💿 remix starter",
-  "keywords": [
-    "typescript",
-    "react",
-    "eslint",
-    "prettier",
-    "jest",
-    "vercel",
-    "remix"
-  ],
-  "homepage": "https://github.com/bradgarropy/remix-starter",
-  "bugs": {
-      "url": "https://github.com/bradgarropy/remix-starter/issues"
-  },
-  "license": "MIT",
-  "author": {
-      "name": "Brad Garropy",
-      "email": "bradgarropy@gmail.com",
-      "url": "https://bradgarropy.com"
-  },
-  "repository": {
-      "type": "git",
-      "url": "https://github.com/bradgarropy/remix-starter"
-  },
-  "scripts": {
-    "start": "remix dev",
-    "build": "remix build"
-  },
-  "dependencies": {
-    "@remix-run/node": "^1.7.0",
-    "@remix-run/react": "^1.7.0",
-    "@remix-run/vercel": "^1.7.0",
-    "@vercel/node": "^2.4.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@remix-run/dev": "^1.7.0",
-    "@remix-run/eslint-config": "^1.7.0",
-    "@remix-run/serve": "^1.7.0",
-    "@types/react": "^18.0.15",
-    "@types/react-dom": "^18.0.6",
-    "eslint": "^8.20.0",
-    "typescript": "^4.7.4"
-  },
-  "engines": {
-    "node": ">=14"
-  },
-  "sideEffects": false
+    "name": "remix-starter",
+    "version": "0.0.1",
+    "description": "💿 remix starter",
+    "keywords": [
+        "typescript",
+        "react",
+        "eslint",
+        "prettier",
+        "jest",
+        "vercel",
+        "remix"
+    ],
+    "homepage": "https://github.com/bradgarropy/remix-starter",
+    "bugs": {
+        "url": "https://github.com/bradgarropy/remix-starter/issues"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Brad Garropy",
+        "email": "bradgarropy@gmail.com",
+        "url": "https://bradgarropy.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bradgarropy/remix-starter"
+    },
+    "scripts": {
+        "start": "remix dev",
+        "build": "remix build",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "format": "prettier --check .",
+        "format:fix": "prettier --write ."
+    },
+    "dependencies": {
+        "@remix-run/node": "^1.7.0",
+        "@remix-run/react": "^1.7.0",
+        "@remix-run/vercel": "^1.7.0",
+        "@vercel/node": "^2.4.4",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@bradgarropy/eslint-config": "^1.2.3",
+        "@bradgarropy/eslint-config-react": "^1.0.2",
+        "@bradgarropy/eslint-config-typescript": "^1.0.3",
+        "@remix-run/dev": "^1.7.0",
+        "@remix-run/eslint-config": "^1.7.0",
+        "@remix-run/serve": "^1.7.0",
+        "@types/react": "^18.0.15",
+        "@types/react-dom": "^18.0.6",
+        "eslint": "^8.20.0",
+        "prettier": "^2.7.1",
+        "typescript": "^4.7.4"
+    },
+    "engines": {
+        "node": ">=14"
+    },
+    "sideEffects": false
 }

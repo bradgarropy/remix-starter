@@ -1,0 +1,16 @@
+# editor
+.vscode
+
+# dependencies
+node_modules
+
+# build
+.cache
+public/build
+api
+
+# test
+coverage
+
+# secrets
+.env*

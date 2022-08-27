@@ -1,34 +1,45 @@
-# Welcome to Remix!
+# 💿 remix starter
 
--   [Remix Docs](https://remix.run/docs)
+_A base starter with formatting, linting, and SEO included._
 
-## Deployment
+[![vercel][vercel-badge]][vercel]
+[![github actions][github-actions-badge]][github-actions]
+[![codecov][codecov-badge]][codecov]
+[![contributing][contributing-badge]][contributing]
+[![contributors][contributors-badge]][contributors]
+[![discord][discord-badge]][discord]
 
-After having run the `create-remix` command and selected "Vercel" as a deployment target, you only need to [import your Git repository](https://vercel.com/new) into Vercel, and it will be deployed.
+<p align="center">
+    <a href="https://remix-starter-bradgarropy.vercel.app">
+        <img alt="remix starter" src="./public/github.png" width="300">
+    </a>
+</p>
 
-If you'd like to avoid using a Git repository, you can also deploy the directory by running [Vercel CLI](https://vercel.com/cli):
+## ✨ contributors
 
-```sh
-npm i -g vercel
-vercel
-```
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://bradgarropy.com"><img src="https://avatars.githubusercontent.com/u/11336745?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brad Garropy</b></sub></a><br /><a href="https://github.com/bradgarropy/remix-starter/commits?author=bradgarropy" title="Code">💻</a> <a href="#design-bradgarropy" title="Design">🎨</a> <a href="https://github.com/bradgarropy/remix-starter/commits?author=bradgarropy" title="Documentation">📖</a> <a href="#infra-bradgarropy" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/bradgarropy/remix-starter/commits?author=bradgarropy" title="Tests">⚠️</a></td>
+  </tr>
+</table>
 
-It is generally recommended to use a Git repository, because future commits will then automatically be deployed by Vercel, through its [Git Integration](https://vercel.com/docs/concepts/git).
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
 
-## Development
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
-To run your Remix app locally, make sure your project's local dependencies are installed:
-
-```sh
-npm install
-```
-
-Afterwards, start the Remix development server like so:
-
-```sh
-npm run dev
-```
-
-Open up [http://localhost:3000](http://localhost:3000) and you should be ready to go!
-
-If you're used to using the `vercel dev` command provided by [Vercel CLI](https://vercel.com/cli) instead, you can also use that, but it's not needed.
+[vercel]: https://vercel.com/bradgarropy/remix-starter
+[vercel-badge]: https://img.shields.io/github/deployments/bradgarropy/remix-starter/production?label=vercel&style=flat-square
+[github-actions]: https://github.com/bradgarropy/remix-starter/actions
+[github-actions-badge]: https://img.shields.io/github/workflow/status/bradgarropy/remix-starter/%F0%9F%A7%AA%20test?style=flat-square
+[codecov]: https://app.codecov.io/gh/bradgarropy/remix-starter
+[codecov-badge]: https://img.shields.io/codecov/c/github/bradgarropy/remix-starter?style=flat-square
+[contributing]: https://github.com/bradgarropy/remix-starter/blob/master/contributing.md
+[contributing-badge]: https://img.shields.io/badge/PRs-welcome-success?style=flat-square
+[contributors]: #-Contributors
+[contributors-badge]: https://img.shields.io/github/all-contributors/bradgarropy/remix-starter?style=flat-square
+[discord]: https://bradgarropy.com/discord
+[discord-badge]: https://img.shields.io/discord/748196643140010015?style=flat-square

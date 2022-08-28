@@ -11,7 +11,7 @@ _A base starter with formatting, linting, and SEO included._
 
 <p align="center">
     <a href="https://remix-starter-bradgarropy.vercel.app">
-        <img alt="remix starter" src="./public/github.png" width="300">
+        <img alt="remix starter" src="./public/github.png" width="800">
     </a>
 </p>
 

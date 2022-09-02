@@ -3,12 +3,13 @@ import {
     Links,
     LiveReload,
     Meta,
-    NavLink,
     Outlet,
     Scripts,
     ScrollRestoration,
 } from "@remix-run/react"
 
+import Footer from "~/components/Footer/Footer"
+import Header from "~/components/Header/Header"
 import globalStyles from "~/styles/global.css"
 
 const meta: MetaFunction = () => ({
@@ -38,35 +39,13 @@ const App = () => {
 
             <body>
                 <div className="page">
-                    <div className="header">
-                        <h1>Remix Starter</h1>
-
-                        <nav className="navigation">
-                            <NavLink
-                                to="/"
-                                prefetch="intent"
-                                className="navigation-link"
-                            >
-                                Home
-                            </NavLink>
-
-                            <NavLink
-                                to="/about"
-                                prefetch="intent"
-                                className="navigation-link"
-                            >
-                                About
-                            </NavLink>
-                        </nav>
-                    </div>
+                    <Header />
 
                     <div className="content">
                         <Outlet />
                     </div>
 
-                    <div className="footer">
-                        <p>Footer</p>
-                    </div>
+                    <Footer />
                 </div>
 
                 <ScrollRestoration />

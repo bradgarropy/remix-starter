@@ -1,13 +1,13 @@
 {
     "name": "remix-starter",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "💿 remix starter",
     "keywords": [
         "typescript",
         "react",
         "eslint",
         "prettier",
-        "jest",
+        "vitest",
         "vercel",
         "remix"
     ],

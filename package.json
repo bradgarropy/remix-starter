@@ -9,7 +9,8 @@
         "prettier",
         "vitest",
         "vercel",
-        "remix"
+        "remix",
+        "remix-stack"
     ],
     "homepage": "https://github.com/bradgarropy/remix-starter",
     "bugs": {

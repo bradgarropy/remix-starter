@@ -11,6 +11,7 @@ import {
 import Footer from "~/components/Footer/Footer"
 import Header from "~/components/Header/Header"
 import globalStyles from "~/styles/global.css"
+import tailwindStyles from "~/styles/tailwind.css"
 
 const meta: MetaFunction = () => ({
     charset: "utf-8",
@@ -23,6 +24,10 @@ const links: LinksFunction = () => {
         {
             rel: "stylesheet",
             href: globalStyles,
+        },
+        {
+            rel: "stylesheet",
+            href: tailwindStyles,
         },
     ]
 

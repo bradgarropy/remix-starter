@@ -28,12 +28,12 @@
         "url": "https://github.com/bradgarropy/remix-starter"
     },
     "scripts": {
-        "start": "run-p -l start:*",
-        "start:remix": "remix dev",
+        "start": "run-p --print-label start:*",
         "start:tailwind": "npm run tailwind -- --watch",
-        "build": "run-s -l build:*",
-        "build:remix": "remix build",
+        "start:remix": "remix dev",
+        "build": "run-s --print-label build:*",
         "build:tailwind": "npm run tailwind -- --minify",
+        "build:remix": "remix build",
         "tailwind": "tailwindcss --input app/styles/app.css --output app/styles/tailwind.css",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",

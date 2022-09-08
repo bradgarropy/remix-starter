@@ -2,12 +2,12 @@ import {NavLink} from "@remix-run/react"
 
 const Navigation = () => {
     return (
-        <nav className="navigation">
-            <NavLink to="/" prefetch="intent" className="navigation-link">
+        <nav className="flex gap-4 font-bold">
+            <NavLink to="/" prefetch="intent">
                 Home
             </NavLink>
 
-            <NavLink to="/about" prefetch="intent" className="navigation-link">
+            <NavLink to="/about" prefetch="intent">
                 About
             </NavLink>
         </nav>

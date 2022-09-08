@@ -10,7 +10,7 @@ import {
 
 import Footer from "~/components/Footer/Footer"
 import Header from "~/components/Header/Header"
-import globalStyles from "~/styles/global.css"
+import tailwindStyles from "~/styles/tailwind.css"
 
 const meta: MetaFunction = () => ({
     charset: "utf-8",
@@ -22,7 +22,7 @@ const links: LinksFunction = () => {
     const links = [
         {
             rel: "stylesheet",
-            href: globalStyles,
+            href: tailwindStyles,
         },
     ]
 
@@ -37,11 +37,11 @@ const App = () => {
                 <Links />
             </head>
 
-            <body>
-                <div className="page">
+            <body className="bg-remix-black text-white">
+                <div className="min-h-screen grid grid-rows-layout">
                     <Header />
 
-                    <div className="content">
+                    <div className="p-8">
                         <Outlet />
                     </div>
 

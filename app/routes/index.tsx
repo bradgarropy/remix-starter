@@ -5,7 +5,7 @@ const meta: MetaFunction = () => ({
 })
 
 const IndexRoute = () => {
-    return <h2>Home</h2>
+    return <h2 className="text-2xl font-bold">Home</h2>
 }
 
 export default IndexRoute

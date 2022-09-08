@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-nav a.active {
+nav > a.active {
     @apply underline underline-offset-6 decoration-3 decoration-remix-blue;
 }

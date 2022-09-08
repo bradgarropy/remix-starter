@@ -1,16 +1,17 @@
 # editor
-.vscode
+/.vscode
 
 # dependencies
-node_modules
+/node_modules
 
 # build
-.cache
-public/build
-api
+/.cache
+/public/build
+/api
+/app/styles/tailwind.css
 
 # test
-coverage
+/coverage
 
 # secrets
 .env*

@@ -1,6 +1,6 @@
 # 💿 remix starter
 
-_A base starter with formatting, linting, and SEO included._
+_A [Remix][remix] starter with [ESLint][eslint], [Prettier][prettier], [TypeScript][typescript], [Vitest][vitest], and [Tailwind][tailwind] included._
 
 [![vercel][vercel-badge]][vercel]
 [![github actions][github-actions-badge]][github-actions]
@@ -43,3 +43,9 @@ _A base starter with formatting, linting, and SEO included._
 [contributors-badge]: https://img.shields.io/github/all-contributors/bradgarropy/remix-starter?style=flat-square
 [discord]: https://bradgarropy.com/discord
 [discord-badge]: https://img.shields.io/discord/748196643140010015?style=flat-square
+[eslint]: https://eslint.org
+[prettier]: https://prettier.io
+[typescript]: https://typescriptlang.org
+[vitest]: https://vitest.dev
+[tailwind]: https://tailwindcss.com
+[remix]: https://remix.run

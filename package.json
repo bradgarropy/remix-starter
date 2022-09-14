@@ -1,6 +1,6 @@
 {
     "name": "remix-starter",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "💿 remix starter",
     "keywords": [
         "typescript",
@@ -41,7 +41,8 @@
         "format:fix": "prettier --write .",
         "test": "vitest --coverage",
         "test:watch": "vitest --coverage --watch",
-        "contributors": "all-contributors generate"
+        "contributors": "all-contributors generate",
+        "new": "plop"
     },
     "dependencies": {
         "@remix-run/node": "^1.7.0",
@@ -55,6 +56,7 @@
         "@bradgarropy/eslint-config": "^1.2.3",
         "@bradgarropy/eslint-config-react": "^1.0.2",
         "@bradgarropy/eslint-config-typescript": "^1.0.3",
+        "@bradgarropy/plop-generator-remix-route": "^1.0.0",
         "@remix-run/dev": "^1.7.0",
         "@remix-run/eslint-config": "^1.7.0",
         "@remix-run/serve": "^1.7.0",
@@ -70,6 +72,7 @@
         "eslint-plugin-simple-import-sort": "^8.0.0",
         "happy-dom": "^6.0.4",
         "npm-run-all": "^4.1.5",
+        "plop": "^3.1.1",
         "postcss": "^8.4.16",
         "prettier": "^2.7.1",
         "tailwindcss": "^3.1.8",

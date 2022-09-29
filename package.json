@@ -11,7 +11,8 @@
         "vercel",
         "remix",
         "remix-stack",
-        "tailwind"
+        "tailwind",
+        "hacktoberfest"
     ],
     "homepage": "https://github.com/bradgarropy/remix-starter",
     "bugs": {

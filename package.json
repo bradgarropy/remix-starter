@@ -1,6 +1,6 @@
 {
     "name": "remix-starter",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "description": "💿 remix starter",
     "keywords": [
         "typescript",
@@ -11,7 +11,8 @@
         "vercel",
         "remix",
         "remix-stack",
-        "tailwind"
+        "tailwind",
+        "hacktoberfest"
     ],
     "homepage": "https://github.com/bradgarropy/remix-starter",
     "bugs": {
@@ -39,6 +40,7 @@
         "lint:fix": "eslint . --fix",
         "format": "prettier --check .",
         "format:fix": "prettier --write .",
+        "typecheck": "tsc",
         "test": "vitest --coverage",
         "test:watch": "vitest --coverage --watch",
         "contributors": "all-contributors generate",

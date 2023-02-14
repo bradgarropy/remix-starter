@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 nav > a.active {
-    @apply underline underline-offset-6 decoration-3 decoration-remix-blue;
+    @apply underline decoration-remix-blue decoration-3 underline-offset-6;
 }

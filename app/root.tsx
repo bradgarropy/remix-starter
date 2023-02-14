@@ -38,7 +38,7 @@ const App = () => {
             </head>
 
             <body className="bg-remix-black text-white">
-                <div className="min-h-screen grid grid-rows-layout">
+                <div className="grid min-h-screen grid-rows-layout">
                     <Header />
 
                     <div className="p-8">

@@ -8,7 +8,6 @@
 /.cache
 /public/build
 /api
-/app/styles/tailwind.css
 
 # test
 /coverage

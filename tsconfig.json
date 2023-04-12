@@ -17,5 +17,13 @@
         "strict": true,
         "target": "ES2019"
     },
-    "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"]
+    "include": [
+        "**/*.ts",
+        "**/*.tsx",
+        "plopfile.js",
+        "remix.config.js",
+        "remix.env.d.ts",
+        "server.js",
+        "tailwind.config.js"
+    ]
 }

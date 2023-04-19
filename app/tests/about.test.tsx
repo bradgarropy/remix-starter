@@ -1,5 +1,4 @@
 import {render, screen} from "@testing-library/react"
-import {expect, test} from "vitest"
 
 import AboutRoute, {meta} from "~/routes/about"
 import {metaArgs} from "~/utils/testUtils"

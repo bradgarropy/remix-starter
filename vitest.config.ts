@@ -12,6 +12,7 @@ const config = defineConfig({
             reporter: ["text"],
         },
         environment: "happy-dom",
+        globals: true,
         passWithNoTests: true,
         watch: false,
     },

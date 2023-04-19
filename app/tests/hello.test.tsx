@@ -1,6 +1,5 @@
 import type {DataFunctionArgs} from "@remix-run/node"
 import {Request} from "@remix-run/node"
-import {expect, test} from "vitest"
 
 import {loader} from "~/routes/api/hello"
 

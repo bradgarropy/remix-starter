@@ -5,7 +5,7 @@ import {metaArgs} from "~/utils/testUtils"
 
 test("renders", () => {
     render(<AboutRoute />)
-    expect(screen.getByText("About"))
+    expect(screen.getByText("About")).toBeInTheDocument()
 })
 
 test("meta", () => {

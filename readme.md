@@ -37,7 +37,7 @@ _A [Remix][remix] starter with [ESLint][eslint], [Prettier][prettier], [TypeScri
 [github-actions-badge]: https://img.shields.io/github/workflow/status/bradgarropy/remix-starter/%F0%9F%A7%AA%20test?style=flat-square
 [codecov]: https://app.codecov.io/gh/bradgarropy/remix-starter
 [codecov-badge]: https://img.shields.io/codecov/c/github/bradgarropy/remix-starter?style=flat-square
-[contributing]: https://github.com/bradgarropy/remix-starter/blob/master/contributing.md
+[contributing]: https://github.com/bradgarropy/remix-starter/blob/main/contributing.md
 [contributing-badge]: https://img.shields.io/badge/PRs-welcome-success?style=flat-square
 [contributors]: #-Contributors
 [contributors-badge]: https://img.shields.io/github/all-contributors/bradgarropy/remix-starter?style=flat-square

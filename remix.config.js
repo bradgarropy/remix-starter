@@ -1,9 +1,7 @@
 /** @type {import('@remix-run/dev').AppConfig} */
 
 const config = {
-    future: {
-        unstable_tailwind: true,
-    },
+    future: {},
     ignoredRouteFiles: ["**/.*"],
     server: process.env.NODE_ENV === "development" ? undefined : "./server.js",
     serverBuildPath: "api/index.js",

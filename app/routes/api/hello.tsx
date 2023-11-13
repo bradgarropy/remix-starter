@@ -1,7 +1,6 @@
-import type {LoaderFunction} from "@remix-run/node"
 import {json} from "@remix-run/node"
 
-const loader: LoaderFunction = () => {
+const loader = () => {
     return json({message: "world"}, {status: 200})
 }
 

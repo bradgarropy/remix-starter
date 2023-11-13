@@ -2,6 +2,7 @@
     "name": "remix-starter",
     "version": "1.5.1",
     "description": "💿 remix starter",
+    "type": "module",
     "keywords": [
         "typescript",
         "react",

@@ -14,7 +14,7 @@ const config = defineConfig({
         environment: "happy-dom",
         globals: true,
         passWithNoTests: true,
-        setupFiles: "app/tests/setup.ts",
+        setupFiles: "src/tests/setup.ts",
         watch: false,
     },
 })

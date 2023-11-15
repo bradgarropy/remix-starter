@@ -7,7 +7,7 @@
         "isolatedModules": true,
         "jsx": "react-jsx",
         "lib": ["DOM", "DOM.Iterable", "ESNext"],
-        "moduleResolution": "Node10",
+        "moduleResolution": "Bundler",
         "noEmit": true,
         "paths": {
             "~/*": ["./src/*"]
@@ -15,7 +15,7 @@
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "strict": true,
-        "target": "ES2019",
+        "target": "ESNext",
         "types": ["vitest/globals"]
     },
     "include": [

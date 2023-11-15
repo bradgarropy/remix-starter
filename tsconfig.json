@@ -6,16 +6,16 @@
         "forceConsistentCasingInFileNames": true,
         "isolatedModules": true,
         "jsx": "react-jsx",
-        "lib": ["DOM", "DOM.Iterable", "ES2019"],
-        "moduleResolution": "node",
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "moduleResolution": "Bundler",
         "noEmit": true,
         "paths": {
-            "~/*": ["./app/*"]
+            "~/*": ["./src/*"]
         },
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "strict": true,
-        "target": "ES2019",
+        "target": "ESNext",
         "types": ["vitest/globals"]
     },
     "include": [

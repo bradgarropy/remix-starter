@@ -104,6 +104,6 @@ I appreciate any and all types of contributions to this project! Contributors ar
 [issues]: https://github.com/bradgarropy/remix-starter/issues
 [codesandbox]: https://codesandbox.io
 [kcd-pr]: https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github
-[license]: https://github.com/bradgarropy/remix-starter/blob/master/license
+[license]: https://github.com/bradgarropy/remix-starter/blob/main/license
 [fork]: https://github.com/bradgarropy/remix-starter/fork
 [contributors]: https://github.com/bradgarropy/remix-starter#-contributors

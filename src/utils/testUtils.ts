@@ -1,4 +1,6 @@
-const metaArgs = {
+import type {MetaArgs} from "@remix-run/node"
+
+const metaArgs: MetaArgs = {
     data: {},
     location: {
         hash: "",
@@ -8,7 +10,7 @@ const metaArgs = {
         state: "",
     },
     params: {},
-    parentsData: {},
+    matches: [],
 }
 
 export {metaArgs}

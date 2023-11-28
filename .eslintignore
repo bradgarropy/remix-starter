@@ -6,8 +6,8 @@
 
 # build
 /.cache
+/build
 /public/build
-/api
 
 # test
 /coverage

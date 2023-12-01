@@ -1,6 +1,6 @@
 import {render, screen} from "@testing-library/react"
 
-import IndexRoute, {meta} from "~/routes/index"
+import IndexRoute, {meta} from "~/routes/_index"
 import {metaArgs} from "~/utils/testUtils"
 
 test("renders", () => {

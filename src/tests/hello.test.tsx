@@ -1,3 +1,5 @@
+import {expect, test} from "vitest"
+
 import {loader} from "~/routes/api/hello"
 
 test("returns", async () => {

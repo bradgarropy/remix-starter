@@ -18,7 +18,7 @@ jobs:
               with:
                   node-version: 18
             - name: "📦 install"
-              run: npm install
+              run: npm install --force
             - name: "🧶 lint"
               run: npm run lint
             - name: "💾 format"

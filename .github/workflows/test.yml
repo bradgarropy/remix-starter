@@ -12,9 +12,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: "📚 checkout"
-              uses: actions/checkout@v4.1.1
+              uses: actions/checkout@v4
             - name: "🟢 node"
-              uses: actions/setup-node@v4.0.1
+              uses: actions/setup-node@v4
               with:
                   node-version: 20
             - name: "📦 install"

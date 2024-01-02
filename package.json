@@ -47,7 +47,7 @@
         "@remix-run/react": "^2.2.0",
         "@remix-run/vercel": "^1.19.3",
         "@vercel/node": "^3.0.9",
-        "isbot": "latest",
+        "isbot": "^4.1.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },

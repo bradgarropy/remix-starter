@@ -11,13 +11,13 @@
         "moduleResolution": "Bundler",
         "noEmit": true,
         "paths": {
-            "~/*": ["./src/*"],
+            "~/*": ["./src/*"]
         },
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "strict": true,
         "target": "ESNext",
-        "types": [],
+        "types": []
     },
-    "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "remix.env.d.ts"],
+    "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "remix.env.d.ts"]
 }

@@ -5,13 +5,13 @@ import Footer from "~/components/Footer/Footer"
 import Header from "~/components/Header/Header"
 import tailwindStyles from "~/styles/tailwind.css?url"
 
-const meta: MetaFunction = () => [
+export const meta: MetaFunction = () => [
     {charset: "utf-8"},
     {title: "💿 remix starter"},
     {viewport: "width=device-width,initial-scale=1"},
 ]
 
-const links: LinksFunction = () => {
+export const links: LinksFunction = () => {
     const links = [
         {
             rel: "stylesheet",
@@ -49,4 +49,3 @@ const App = () => {
 }
 
 export default App
-export {links, meta}

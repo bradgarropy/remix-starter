@@ -1,16 +1,9 @@
 import type {LinksFunction, MetaFunction} from "@remix-run/node"
-import {
-    Links,
-    LiveReload,
-    Meta,
-    Outlet,
-    Scripts,
-    ScrollRestoration,
-} from "@remix-run/react"
+import {Links, Meta, Outlet, Scripts, ScrollRestoration} from "@remix-run/react"
 
 import Footer from "~/components/Footer/Footer"
 import Header from "~/components/Header/Header"
-import tailwindStyles from "~/styles/tailwind.css"
+import tailwindStyles from "~/styles/tailwind.css?url"
 
 const meta: MetaFunction = () => [
     {charset: "utf-8"},
@@ -50,7 +43,6 @@ const App = () => {
 
                 <ScrollRestoration />
                 <Scripts />
-                <LiveReload />
             </body>
         </html>
     )

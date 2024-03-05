@@ -1,6 +1,6 @@
 {
     "name": "remix-starter",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "description": "💿 remix starter",
     "type": "module",
     "keywords": [
@@ -30,8 +30,8 @@
         "url": "https://github.com/bradgarropy/remix-starter"
     },
     "scripts": {
-        "start": "remix dev",
-        "build": "remix build",
+        "start": "remix vite:dev",
+        "build": "remix vite:build",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "format": "prettier --check .",
@@ -78,6 +78,7 @@
         "prettier-plugin-tailwindcss": "^0.5.7",
         "tailwindcss": "^3.1.8",
         "typescript": "^5.0.4",
+        "vite": "^5.1.5",
         "vite-tsconfig-paths": "^4.0.5",
         "vitest": "^1.1.0"
     },

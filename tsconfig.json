@@ -19,5 +19,5 @@
         "target": "ESNext",
         "types": []
     },
-    "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "remix.env.d.ts"]
+    "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "env.d.ts"]
 }

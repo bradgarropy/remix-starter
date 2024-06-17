@@ -30,8 +30,8 @@ const App = () => {
                 <Links />
             </head>
 
-            <body className="bg-remix-black text-white">
-                <div className="grid min-h-screen grid-rows-layout">
+            <body className="bg-white text-black">
+                <div className="grid min-h-screen grid-rows-[auto,1fr,auto]">
                     <Header />
 
                     <div className="p-8">

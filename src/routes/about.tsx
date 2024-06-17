@@ -7,7 +7,11 @@ const meta: MetaFunction = () => [
 ]
 
 const AboutRoute = () => {
-    return <h2 className="text-2xl font-bold">About</h2>
+    return (
+        <>
+            <h2 className="text-2xl font-bold">About</h2>
+        </>
+    )
 }
 
 export default AboutRoute

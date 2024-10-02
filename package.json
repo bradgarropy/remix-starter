@@ -1,6 +1,6 @@
 {
     "name": "remix-starter",
-    "version": "3.0.0",
+    "version": "3.1.0",
     "description": "💿 remix starter",
     "type": "module",
     "keywords": [
@@ -72,7 +72,7 @@
         "eslint": "^8.20.0",
         "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-simple-import-sort": "^12.0.0",
-        "jsdom": "^24.0.0",
+        "jsdom": "^25.0.1",
         "plop": "^4.0.0",
         "postcss": "^8.4.16",
         "prettier": "^3.1.0",

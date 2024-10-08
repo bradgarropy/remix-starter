@@ -46,6 +46,7 @@
         "@remix-run/node": "^2.2.0",
         "@remix-run/react": "^2.2.0",
         "@remix-run/vercel": "^1.19.3",
+        "@sentry/remix": "^8.33.1",
         "@vercel/node": "^3.0.9",
         "isbot": "^5.1.1",
         "react": "^18.2.0",

@@ -3,10 +3,20 @@ import {PassThrough} from "node:stream"
 import type {EntryContext} from "@remix-run/node"
 import {createReadableStreamFromReadable} from "@remix-run/node"
 import {RemixServer} from "@remix-run/react"
+import * as Sentry from "@sentry/remix"
 import {isbot} from "isbot"
 import {renderToPipeableStream} from "react-dom/server"
 
 const ABORT_DELAY = 5_000
+
+Sentry.init({
+    dsn: "https://bd22d6af8d5391631deea346947d86d0@o1037846.ingest.us.sentry.io/4508053968060416",
+    autoInstrumentRemix: true,
+    captureActionFormDataKeys: {},
+    sendDefaultPii: true,
+})
+
+export const handleError = Sentry.sentryHandleError
 
 const handleRequest = (
     request: Request,

@@ -60,6 +60,7 @@
         "@remix-run/dev": "^2.2.0",
         "@remix-run/eslint-config": "^2.2.0",
         "@remix-run/serve": "^2.2.0",
+        "@sentry/vite-plugin": "^2.22.5",
         "@testing-library/dom": "^10.4.0",
         "@testing-library/jest-dom": "^6.1.4",
         "@testing-library/react": "^16.0.0",

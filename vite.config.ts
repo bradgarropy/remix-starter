@@ -28,6 +28,12 @@ const config = defineConfig(({mode}) => {
                 authToken: env.SENTRY_AUTH_TOKEN,
                 org: env.SENTRY_ORG,
                 project: env.SENTRY_PROJECT,
+                sourcemaps: {
+                    filesToDeleteAfterUpload: [
+                        "build/client/**/*.map",
+                        "build/server/**/*.map",
+                    ],
+                },
                 telemetry: false,
             }),
         ],

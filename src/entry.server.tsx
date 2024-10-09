@@ -10,7 +10,7 @@ import {renderToPipeableStream} from "react-dom/server"
 const ABORT_DELAY = 5_000
 
 Sentry.init({
-    dsn: "https://bd22d6af8d5391631deea346947d86d0@o1037846.ingest.us.sentry.io/4508053968060416",
+    dsn: process.env.VITE_SENTRY_DSN,
     autoInstrumentRemix: true,
     captureActionFormDataKeys: {},
     sendDefaultPii: true,

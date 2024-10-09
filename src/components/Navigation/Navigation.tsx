@@ -11,8 +11,8 @@ const Navigation = () => {
                 About
             </NavLink>
 
-            <NavLink to="/sentry/client" prefetch="intent">
-                Client
+            <NavLink to="/sentry/frontend" prefetch="intent">
+                Frontend
             </NavLink>
 
             <NavLink to="/sentry/loader" prefetch="intent">

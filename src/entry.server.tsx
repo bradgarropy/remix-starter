@@ -11,6 +11,7 @@ const ABORT_DELAY = 5_000
 
 Sentry.init({
     dsn: process.env.VITE_SENTRY_DSN,
+    environment: process.env.NODE_ENV,
     autoInstrumentRemix: true,
     captureActionFormDataKeys: {},
     sendDefaultPii: true,

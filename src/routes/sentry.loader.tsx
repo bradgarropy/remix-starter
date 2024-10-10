@@ -10,7 +10,7 @@ export const loader = () => {
     throw new Error("Sentry Loader Error")
 }
 
-const IndexRoute = () => {
+const Route = () => {
     return (
         <>
             <h2 className="text-2xl font-bold">Loader Error</h2>
@@ -18,4 +18,4 @@ const IndexRoute = () => {
     )
 }
 
-export default IndexRoute
+export default Route

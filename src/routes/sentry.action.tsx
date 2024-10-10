@@ -10,7 +10,7 @@ export const action = () => {
     throw new Error("Sentry Action Error")
 }
 
-const IndexRoute = () => {
+const Route = () => {
     return (
         <>
             <h2 className="text-2xl font-bold">Home</h2>
@@ -23,4 +23,4 @@ const IndexRoute = () => {
     )
 }
 
-export default IndexRoute
+export default Route

@@ -6,7 +6,7 @@ const meta: MetaFunction = () => [
     },
 ]
 
-const AboutRoute = () => {
+const Route = () => {
     return (
         <>
             <h2 className="text-2xl font-bold">About</h2>
@@ -14,5 +14,5 @@ const AboutRoute = () => {
     )
 }
 
-export default AboutRoute
+export default Route
 export {meta}

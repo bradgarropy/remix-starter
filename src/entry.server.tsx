@@ -15,9 +15,6 @@ Sentry.init({
     dsn: process.env.VITE_SENTRY_DSN,
     environment: process.env.NODE_ENV,
     release: createRelease(),
-    autoInstrumentRemix: true,
-    captureActionFormDataKeys: {},
-    sendDefaultPii: true,
 })
 
 export const handleError = Sentry.sentryHandleError

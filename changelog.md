@@ -33,7 +33,7 @@ and this project adheres to [Semantic Versioning][semver].
 
 ## [Unreleased]
 
--   TODO
+-   _TBD_
 
 [unreleased]: https://github.com/bradgarropy/remix-starter/compare/v3.0.0...HEAD
 [keep-a-changelog]: https://keepachangelog.com

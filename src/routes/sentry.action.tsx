@@ -13,7 +13,7 @@ export const action = () => {
 const Route = () => {
     return (
         <>
-            <h2 className="text-2xl font-bold">Home</h2>
+            <h2 className="text-2xl font-bold">Sentry Action</h2>
 
             <form method="post">
                 <input type="text" name="name" id="name" />

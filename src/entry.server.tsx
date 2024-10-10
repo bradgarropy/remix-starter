@@ -11,13 +11,13 @@ import {createRelease} from "~/utils/sentry"
 
 const ABORT_DELAY = 5_000
 
-// Sentry.init({
-//     dsn: process.env.VITE_SENTRY_DSN,
-//     environment: process.env.NODE_ENV,
-//     release: createRelease(),
-// })
+Sentry.init({
+    dsn: process.env.VITE_SENTRY_DSN,
+    environment: process.env.NODE_ENV,
+    release: createRelease(),
+})
 
-// export const handleError = Sentry.sentryHandleError
+export const handleError = Sentry.sentryHandleError
 
 const handleRequest = (
     request: Request,

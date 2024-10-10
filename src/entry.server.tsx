@@ -17,7 +17,7 @@ Sentry.init({
     release: createRelease(),
 })
 
-export const handleError = Sentry.sentryHandleError
+// export const handleError = Sentry.sentryHandleError
 
 const handleRequest = (
     request: Request,

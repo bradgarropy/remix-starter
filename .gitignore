@@ -13,7 +13,7 @@
 /coverage
 
 # secrets
-.env*
+.env
 
 # os
 .DS_Store

@@ -5,6 +5,8 @@ import react from "@vitejs/plugin-react"
 import {defineConfig} from "vite"
 import tsconfigPaths from "vite-tsconfig-paths"
 
+import {createRelease} from "~/utils/sentry"
+
 installGlobals()
 
 const config = defineConfig({
@@ -26,6 +28,10 @@ const config = defineConfig({
                   authToken: process.env.SENTRY_AUTH_TOKEN,
                   org: process.env.SENTRY_ORG,
                   project: process.env.SENTRY_PROJECT,
+                  release: {
+                      create: true,
+                      name: createRelease(),
+                  },
                   sourcemaps: {
                       filesToDeleteAfterUpload: [
                           "build/client/**/*.map",

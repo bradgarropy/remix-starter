@@ -6,10 +6,14 @@ export const meta: MetaFunction = () => [
     },
 ]
 
+export const loader = () => {
+    throw new Error("Sentry Loader Error")
+}
+
 const Route = () => {
     return (
         <>
-            <h2 className="text-2xl font-bold">Home</h2>
+            <h2 className="text-2xl font-bold">Loader Error</h2>
         </>
     )
 }

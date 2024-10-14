@@ -1,5 +1,6 @@
 import type {LinksFunction, MetaFunction} from "@remix-run/node"
 import {Links, Meta, Outlet, Scripts, ScrollRestoration} from "@remix-run/react"
+import {withSentry} from "@sentry/remix"
 
 import Footer from "~/components/Footer/Footer"
 import Header from "~/components/Header/Header"
@@ -53,4 +54,4 @@ const App = () => {
     )
 }
 
-export default App
+export default withSentry(App)

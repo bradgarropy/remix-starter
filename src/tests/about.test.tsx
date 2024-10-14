@@ -1,11 +1,11 @@
 import {render, screen} from "@testing-library/react"
 import {expect, test} from "vitest"
 
-import AboutRoute, {meta} from "~/routes/about"
+import Route, {meta} from "~/routes/about"
 import {metaArgs} from "~/utils/testUtils"
 
 test("renders", () => {
-    render(<AboutRoute />)
+    render(<Route />)
     expect(screen.getByText("About")).toBeInTheDocument()
 })
 

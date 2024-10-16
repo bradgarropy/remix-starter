@@ -38,7 +38,10 @@
         "format:fix": "prettier --write .",
         "typecheck": "tsc",
         "test": "vitest --coverage",
+        "test:ui": "vitest --coverage --watch --ui",
         "test:watch": "vitest --coverage --watch",
+        "test:e2e": "playwright test",
+        "test:e2e:ui": "playwright test --ui",
         "contributors": "all-contributors generate",
         "new": "plop"
     },
@@ -57,6 +60,7 @@
         "@bradgarropy/eslint-config-react": "^1.0.2",
         "@bradgarropy/eslint-config-typescript": "^1.0.3",
         "@bradgarropy/plop-generator-remix-route": "^1.0.0",
+        "@playwright/test": "^1.48.0",
         "@remix-run/dev": "^2.2.0",
         "@remix-run/eslint-config": "^2.2.0",
         "@remix-run/serve": "^2.2.0",
@@ -65,10 +69,12 @@
         "@testing-library/jest-dom": "^6.1.4",
         "@testing-library/react": "^16.0.0",
         "@testing-library/user-event": "^14.4.3",
+        "@types/node": "^22.7.5",
         "@types/react": "^18.0.15",
         "@types/react-dom": "^18.0.6",
         "@vitejs/plugin-react": "^4.0.1",
-        "@vitest/coverage-v8": "^2.0.5",
+        "@vitest/coverage-v8": "^2.1.3",
+        "@vitest/ui": "^2.1.3",
         "all-contributors-cli": "^6.20.0",
         "autoprefixer": "^10.4.8",
         "eslint": "^8.20.0",
@@ -83,7 +89,7 @@
         "typescript": "^5.0.4",
         "vite": "^5.1.5",
         "vite-tsconfig-paths": "^5.0.1",
-        "vitest": "^2.0.5"
+        "vitest": "^2.1.3"
     },
     "engines": {
         "node": ">=14"

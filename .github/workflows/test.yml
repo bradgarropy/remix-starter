@@ -28,4 +28,4 @@ jobs:
                   npx playwright install --with-deps
                   npm run test:e2e
             - name: "☂️ coverage"
-              uses: codecov/codecov-action@v1.2.1
+              uses: codecov/codecov-action@v4.6.0

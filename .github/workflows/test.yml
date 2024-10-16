@@ -29,3 +29,5 @@ jobs:
                   npm run test:e2e
             - name: "☂️ coverage"
               uses: codecov/codecov-action@v4.6.0
+              with:
+                  token: ${{ secrets.CODECOV_TOKEN }}

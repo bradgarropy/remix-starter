@@ -1,20 +1,31 @@
 import {expect, test} from "@playwright/test"
 
-test("has title", async ({page}) => {
-    await page.goto("https://playwright.dev/")
+test("home page", async ({page}) => {
+    await page.goto("localhost:3000")
+    await expect(page).toHaveTitle("💿 remix starter | home")
 
-    // Expect a title "to contain" a substring.
-    await expect(page).toHaveTitle(/Playwright/)
+    await expect(page.getByRole("heading", {name: "Home"})).toBeVisible()
+    await expect(page.getByRole("link", {name: "Home"})).toBeVisible()
+    await expect(page.getByRole("link", {name: "About"})).toBeVisible()
 })
 
-test("get started link", async ({page}) => {
-    await page.goto("https://playwright.dev/")
+test("about page", async ({page}) => {
+    await page.goto("localhost:3000/about")
+    await expect(page).toHaveTitle("💿 remix starter | about")
 
-    // Click the get started link.
-    await page.getByRole("link", {name: "Get started"}).click()
+    await expect(page.getByRole("heading", {name: "About"})).toBeVisible()
+    await expect(page.getByRole("link", {name: "Home"})).toBeVisible()
+    await expect(page.getByRole("link", {name: "About"})).toBeVisible()
+})
 
-    // Expects page to have a heading with the name of Installation.
-    await expect(
-        page.getByRole("heading", {name: "Installation"}),
-    ).toBeVisible()
+test("navigates", async ({page}) => {
+    await page.goto("localhost:3000")
+
+    await expect(page).toHaveTitle("💿 remix starter | home")
+    await expect(page.getByRole("heading", {name: "Home"})).toBeVisible()
+
+    await page.getByRole("link", {name: "About"}).click()
+
+    await expect(page).toHaveTitle("💿 remix starter | about")
+    await expect(page.getByRole("heading", {name: "About"})).toBeVisible()
 })

@@ -9,7 +9,7 @@ import {renderToPipeableStream} from "react-dom/server"
 
 import {createRelease} from "~/utils/sentry"
 
-const ABORT_DELAY = 5_000
+const streamTimeout = 5000
 
 Sentry.init({
     dsn: process.env.VITE_SENTRY_DSN,
@@ -52,7 +52,7 @@ const handleBotRequest = (
             <RemixServer
                 context={remixContext}
                 url={request.url}
-                abortDelay={ABORT_DELAY}
+                abortDelay={streamTimeout}
             />,
             {
                 onAllReady() {
@@ -86,7 +86,7 @@ const handleBotRequest = (
             },
         )
 
-        setTimeout(abort, ABORT_DELAY)
+        setTimeout(abort, streamTimeout)
     })
 }
 
@@ -102,7 +102,7 @@ const handleBrowserRequest = (
             <RemixServer
                 context={remixContext}
                 url={request.url}
-                abortDelay={ABORT_DELAY}
+                abortDelay={streamTimeout}
             />,
             {
                 onShellReady() {
@@ -136,8 +136,9 @@ const handleBrowserRequest = (
             },
         )
 
-        setTimeout(abort, ABORT_DELAY)
+        setTimeout(abort, streamTimeout + 1000)
     })
 }
 
 export default handleRequest
+export {streamTimeout}

@@ -1,7 +1,7 @@
 import {render, screen} from "@testing-library/react"
 import {expect, test} from "vitest"
 
-import Route, {meta} from "~/routes/_index"
+import Route, {meta} from "~/routes/index"
 import {metaArgs} from "~/utils/testUtils"
 
 test("renders", () => {

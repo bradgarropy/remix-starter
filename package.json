@@ -1,6 +1,6 @@
 {
     "name": "remix-starter",
-    "version": "4.0.0",
+    "version": "4.1.0",
     "description": "💿 remix starter",
     "type": "module",
     "keywords": [
@@ -62,6 +62,7 @@
         "@bradgarropy/plop-generator-remix-route": "^1.0.0",
         "@playwright/test": "^1.48.0",
         "@remix-run/dev": "^2.2.0",
+        "@remix-run/route-config": "^2.15.1",
         "@remix-run/serve": "^2.2.0",
         "@sentry/vite-plugin": "^2.22.5",
         "@testing-library/dom": "^10.4.0",

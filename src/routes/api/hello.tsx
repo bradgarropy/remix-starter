@@ -1,7 +1,7 @@
-import {json} from "@remix-run/node"
+import {data} from "@remix-run/node"
 
 const loader = () => {
-    return json({message: "world"}, {status: 200})
+    return data({message: "world"}, {status: 200})
 }
 
 export {loader}

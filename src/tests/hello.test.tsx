@@ -3,9 +3,8 @@ import {expect, test} from "vitest"
 import {loader} from "~/routes/api/hello"
 
 test("returns", async () => {
-    const response = await loader()
-    const json = await response.json()
+    const {data, init} = loader()
 
-    expect(response.status).toEqual(200)
-    expect(json).toEqual({message: "world"})
+    expect(init).toMatchObject({status: 200})
+    expect(data).toEqual({message: "world"})
 })

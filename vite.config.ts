@@ -2,12 +2,18 @@ import {vitePlugin as remix} from "@remix-run/dev"
 import {installGlobals} from "@remix-run/node"
 import {sentryVitePlugin as sentry} from "@sentry/vite-plugin"
 import react from "@vitejs/plugin-react"
-import {defineConfig} from "vite"
 import tsconfigPaths from "vite-tsconfig-paths"
+import {defineConfig} from "vitest/config"
 
 import {createRelease} from "./src/utils/sentry"
 
 installGlobals()
+
+declare module "@remix-run/node" {
+    interface Future {
+        v3_singleFetch: true
+    }
+}
 
 const config = defineConfig({
     build: {
@@ -20,7 +26,13 @@ const config = defineConfig({
             : remix({
                   appDirectory: "src",
                   ignoredRouteFiles: ["**/.*"],
-                  future: {},
+                  future: {
+                      v3_fetcherPersist: true,
+                      v3_relativeSplatPath: true,
+                      v3_throwAbortReason: true,
+                      v3_lazyRouteDiscovery: true,
+                      v3_singleFetch: true,
+                  },
                   serverModuleFormat: "esm",
               }),
         process.env.SENTRY_AUTH_TOKEN

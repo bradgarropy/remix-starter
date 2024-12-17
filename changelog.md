@@ -57,7 +57,7 @@ _2024-12-10_
 - Remove [`@remix-run/eslint-config`][remix-run-eslint-config]
 
 [unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.1.0...HEAD
-[4.0.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.1.0
+[4.1.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.1.0
 [4.0.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.0.0
 [keep-a-changelog]: https://keepachangelog.com
 [semver]: https://semver.org

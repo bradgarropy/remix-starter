@@ -11,6 +11,6 @@ test("renders", () => {
         </MemoryRouter>,
     )
 
-    expect(screen.getByText("Home"))
-    expect(screen.getByText("About"))
+    expect(screen.getByText("Home")).toBeInTheDocument()
+    expect(screen.getByText("About")).toBeInTheDocument()
 })

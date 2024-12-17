@@ -5,5 +5,5 @@ import Footer from "~/components/Footer"
 
 test("renders", () => {
     render(<Footer />)
-    expect(screen.getByText("Footer"))
+    expect(screen.getByText("Footer")).toBeInTheDocument()
 })

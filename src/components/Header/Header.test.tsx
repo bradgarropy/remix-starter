@@ -11,5 +11,5 @@ test("renders", () => {
         </MemoryRouter>,
     )
 
-    expect(screen.getByText("Remix Starter"))
+    expect(screen.getByText("Remix Starter")).toBeInTheDocument()
 })

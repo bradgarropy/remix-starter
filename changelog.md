@@ -36,6 +36,12 @@ _YYYY-MM-DD_
 
 - _TBD_
 
+## [4.2.0][4.2.0]
+
+_2024-12-17_
+
+- Improve `eslint` configuration
+
 ## [4.1.0][4.1.0]
 
 _2024-12-10_
@@ -57,7 +63,8 @@ _2024-12-10_
     - [`v3_singleFetch`][v3-singleFetch]
 - Remove [`@remix-run/eslint-config`][remix-run-eslint-config]
 
-[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.1.0...HEAD
+[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.2.0...HEAD
+[4.2.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.2.0
 [4.1.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.1.0
 [4.0.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.0.0
 [keep-a-changelog]: https://keepachangelog.com

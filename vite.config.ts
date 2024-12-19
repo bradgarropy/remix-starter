@@ -2,6 +2,7 @@ import {vitePlugin as remix} from "@remix-run/dev"
 import {installGlobals} from "@remix-run/node"
 import {sentryVitePlugin as sentry} from "@sentry/vite-plugin"
 import react from "@vitejs/plugin-react"
+import {remixDevTools} from "remix-development-tools"
 import tsconfigPaths from "vite-tsconfig-paths"
 import {defineConfig} from "vitest/config"
 
@@ -21,6 +22,7 @@ const config = defineConfig({
     },
     plugins: [
         tsconfigPaths(),
+        remixDevTools(),
         process.env.VITEST
             ? react()
             : remix({

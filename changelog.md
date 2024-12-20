@@ -38,7 +38,7 @@ _YYYY-MM-DD_
 
 ## [4.3.0][4.3.0]
 
-_2024-12-19_
+_2024-12-20_
 
 - Integrate [`remix-development-tools`][remix-development-tools]
 

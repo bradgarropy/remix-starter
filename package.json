@@ -30,8 +30,9 @@
         "url": "https://github.com/bradgarropy/remix-starter"
     },
     "scripts": {
-        "start": "remix vite:dev",
+        "dev": "remix vite:dev",
         "build": "remix vite:build",
+        "start": "remix-serve build/server/index.js",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "format": "prettier --check .",

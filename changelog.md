@@ -41,6 +41,7 @@ _YYYY-MM-DD_
 _2024-12-20_
 
 - Integrate [`remix-development-tools`][remix-development-tools]
+- Add [`vercel`][vercel-config] configuration
 
 ## [4.2.0][4.2.0]
 
@@ -87,3 +88,4 @@ _2024-12-10_
 [remix-run-eslint-config]: https://remix.run/docs/en/main/start/future-flags#remix-runeslint-config
 [api-hello]: https://remix-starter-bradgarropy.vercel.app/api/hello
 [remix-development-tools]: https://remix-development-tools.fly.dev
+[vercel-config]: https://vercel.com/docs/projects/project-configuration

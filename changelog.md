@@ -36,6 +36,12 @@ _YYYY-MM-DD_
 
 - _TBD_
 
+## [4.3.0][4.3.0]
+
+_2024-12-20_
+
+- Integrate [`remix-development-tools`][remix-development-tools]
+
 ## [4.2.0][4.2.0]
 
 _2024-12-17_
@@ -63,7 +69,8 @@ _2024-12-10_
     - [`v3_singleFetch`][v3-singleFetch]
 - Remove [`@remix-run/eslint-config`][remix-run-eslint-config]
 
-[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.2.0...HEAD
+[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.3.0...HEAD
+[4.3.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.3.0
 [4.2.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.2.0
 [4.1.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.1.0
 [4.0.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.0.0
@@ -79,3 +86,4 @@ _2024-12-10_
 [v3-routeConfig]: https://remix.run/docs/en/main/start/future-flags#v3_routeconfig
 [remix-run-eslint-config]: https://remix.run/docs/en/main/start/future-flags#remix-runeslint-config
 [api-hello]: https://remix-starter-bradgarropy.vercel.app/api/hello
+[remix-development-tools]: https://remix-development-tools.fly.dev

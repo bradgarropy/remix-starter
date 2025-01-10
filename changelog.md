@@ -38,9 +38,10 @@ _YYYY-MM-DD_
 
 ## [4.3.0][4.3.0]
 
-_2024-12-20_
+_2025-01-09_
 
 - Integrate [`remix-development-tools`][remix-development-tools]
+- Update [codecov action][codecov-action]
 - Add [`vercel`][vercel-config] configuration
 
 ## [4.2.0][4.2.0]
@@ -88,4 +89,5 @@ _2024-12-10_
 [remix-run-eslint-config]: https://remix.run/docs/en/main/start/future-flags#remix-runeslint-config
 [api-hello]: https://remix-starter-bradgarropy.vercel.app/api/hello
 [remix-development-tools]: https://remix-development-tools.fly.dev
+[codecov-action]: https://github.com/codecov/codecov-action
 [vercel-config]: https://vercel.com/docs/projects/project-configuration

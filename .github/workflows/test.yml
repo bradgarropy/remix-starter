@@ -29,6 +29,6 @@ jobs:
                   npm run build
                   npm run test:e2e
             - name: "☂️ coverage"
-              uses: codecov/codecov-action@v4.6.0
+              uses: codecov/codecov-action@v5
               with:
                   token: ${{ secrets.CODECOV_TOKEN }}

@@ -36,17 +36,13 @@ _YYYY-MM-DD_
 
 - _TBD_
 
-## [4.4.0][4.4.0]
+## [4.3.0][4.3.0]
 
 _2025-01-09_
 
-- Update [codecov action][codecov-action]
-
-## [4.3.0][4.3.0]
-
-_2024-12-20_
-
 - Integrate [`remix-development-tools`][remix-development-tools]
+- Update [codecov action][codecov-action]
+- Add [`vercel`][vercel-config] configuration
 
 ## [4.2.0][4.2.0]
 
@@ -75,8 +71,7 @@ _2024-12-10_
     - [`v3_singleFetch`][v3-singleFetch]
 - Remove [`@remix-run/eslint-config`][remix-run-eslint-config]
 
-[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.4.0...HEAD
-[4.4.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.4.0
+[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.3.0...HEAD
 [4.3.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.3.0
 [4.2.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.2.0
 [4.1.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.1.0
@@ -95,3 +90,4 @@ _2024-12-10_
 [api-hello]: https://remix-starter-bradgarropy.vercel.app/api/hello
 [remix-development-tools]: https://remix-development-tools.fly.dev
 [codecov-action]: https://github.com/codecov/codecov-action
+[vercel-config]: https://vercel.com/docs/projects/project-configuration

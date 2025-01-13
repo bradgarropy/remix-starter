@@ -22,7 +22,11 @@ const config = defineConfig({
     },
     plugins: [
         tsconfigPaths(),
-        remixDevTools(),
+        remixDevTools({
+            client: {
+                showBreakpointIndicator: false,
+            },
+        }),
         process.env.VITEST
             ? react()
             : remix({

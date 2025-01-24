@@ -34,7 +34,7 @@ _YYYY-MM-DD_
 
 ## [Unreleased]
 
-- _TBD_
+- Upgrade to [Vitest 3][vitest-3]
 
 ## [4.4.0][4.4.0]
 
@@ -98,3 +98,4 @@ _2024-12-10_
 [remix-development-tools]: https://remix-development-tools.fly.dev
 [codecov-action]: https://github.com/codecov/codecov-action
 [vercel-config]: https://vercel.com/docs/projects/project-configuration
+[vitest-3]: https://vitest.dev/guide/migration.html#vitest-3

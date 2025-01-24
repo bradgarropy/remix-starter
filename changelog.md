@@ -34,6 +34,12 @@ _YYYY-MM-DD_
 
 ## [Unreleased]
 
+- _TBD_
+
+## [4.5.0][4.5.0]
+
+_2025-01-23_
+
 - Upgrade to [Vitest 3][vitest-3]
 
 ## [4.4.0][4.4.0]
@@ -77,7 +83,8 @@ _2024-12-10_
     - [`v3_singleFetch`][v3-singleFetch]
 - Remove [`@remix-run/eslint-config`][remix-run-eslint-config]
 
-[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.4.0...HEAD
+[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.5.0...HEAD
+[4.5.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.5.0
 [4.4.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.4.0
 [4.3.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.3.0
 [4.2.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.2.0

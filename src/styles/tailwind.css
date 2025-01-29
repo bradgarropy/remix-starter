@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 nav > a.active {
     @apply underline decoration-purple-500 decoration-4 underline-offset-4;

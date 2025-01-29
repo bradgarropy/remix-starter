@@ -36,6 +36,12 @@ _YYYY-MM-DD_
 
 - _TBD_
 
+## [4.6.0][4.6.0]
+
+_2025-01-29_
+
+- Upgrade to [Tailwind v4][tailwind-v4]
+
 ## [4.5.0][4.5.0]
 
 _2025-01-23_
@@ -83,7 +89,8 @@ _2024-12-10_
     - [`v3_singleFetch`][v3-singleFetch]
 - Remove [`@remix-run/eslint-config`][remix-run-eslint-config]
 
-[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.5.0...HEAD
+[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.6.0...HEAD
+[4.6.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.6.0
 [4.5.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.5.0
 [4.4.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.4.0
 [4.3.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.3.0
@@ -106,3 +113,4 @@ _2024-12-10_
 [codecov-action]: https://github.com/codecov/codecov-action
 [vercel-config]: https://vercel.com/docs/projects/project-configuration
 [vitest-3]: https://vitest.dev/guide/migration.html#vitest-3
+[tailwind-v4]: https://tailwindcss.com/docs/upgrade-guide

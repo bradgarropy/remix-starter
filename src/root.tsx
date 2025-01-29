@@ -38,7 +38,7 @@ const App = () => {
             </head>
 
             <body className="bg-white text-black">
-                <div className="grid min-h-screen grid-rows-[auto,1fr,auto]">
+                <div className="grid min-h-screen grid-rows-[auto_1fr_auto]">
                     <Header />
 
                     <div className="p-8">

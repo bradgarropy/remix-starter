@@ -6,6 +6,7 @@ import {expect, test, vitest} from "vitest"
 import ErrorBoundary from "~/components/ErrorBoundary"
 
 const useRouteErrorSpy = vitest.spyOn(remix, "useRouteError")
+const isRouterErrorSpy = vitest.spyOn(remix, "isRouteErrorResponse")
 
 test.only("shows route error", () => {
     const mockErrorResponse: ErrorResponse = {
@@ -15,6 +16,7 @@ test.only("shows route error", () => {
     }
 
     useRouteErrorSpy.mockReturnValue(mockErrorResponse)
+    isRouterErrorSpy.mockReturnValue(true)
 
     render(<ErrorBoundary />)
 
@@ -36,6 +38,7 @@ test("shows javascript error", () => {
     }
 
     useRouteErrorSpy.mockReturnValue(mockError)
+    isRouterErrorSpy.mockReturnValue(false)
 
     render(<ErrorBoundary />)
 
@@ -45,6 +48,7 @@ test("shows javascript error", () => {
 
 test("shows unknown error", () => {
     useRouteErrorSpy.mockReturnValue("Something went wrong")
+    isRouterErrorSpy.mockReturnValue(false)
 
     render(<ErrorBoundary />)
 

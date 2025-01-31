@@ -42,12 +42,7 @@ test("shows javascript error", () => {
 
     render(<ErrorBoundary />)
 
-    expect(screen.getByText(mockError.message)).toBeInTheDocument()
-
-    expect(
-        screen.getByText("Error: Something went wrong", {exact: false}),
-    ).toBeInTheDocument()
-
+    expect(screen.getByText("Error: Something went wrong")).toBeInTheDocument()
     expect(screen.getByText("at file://", {exact: false})).toBeInTheDocument()
 })
 
@@ -57,5 +52,5 @@ test("shows unknown error", () => {
 
     render(<ErrorBoundary />)
 
-    expect(screen.getByText("Unknown Error")).toBeInTheDocument()
+    expect(screen.getByText("Unknown error")).toBeInTheDocument()
 })

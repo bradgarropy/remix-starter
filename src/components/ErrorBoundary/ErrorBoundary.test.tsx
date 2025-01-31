@@ -1,22 +1,27 @@
 import type {ErrorResponse} from "@remix-run/react"
-import * as remix from "@remix-run/react"
+import {isRouteErrorResponse, useRouteError} from "@remix-run/react"
 import {render, screen} from "@testing-library/react"
 import {expect, test, vitest} from "vitest"
 
 import ErrorBoundary from "~/components/ErrorBoundary"
 
-const useRouteErrorSpy = vitest.spyOn(remix, "useRouteError")
-const isRouterErrorSpy = vitest.spyOn(remix, "isRouteErrorResponse")
+vitest.mock("@remix-run/react", () => ({
+    useRouteError: vitest.fn(),
+    isRouteErrorResponse: vitest.fn(),
+}))
 
-test.only("shows route error", () => {
+const useRouteErrorMock = vitest.mocked(useRouteError)
+const isRouteErrorResponseMock = vitest.mocked(isRouteErrorResponse)
+
+test("shows route error", () => {
     const mockErrorResponse: ErrorResponse = {
         status: 500,
         statusText: "Internal Server Error",
         data: "Something went wrong",
     }
 
-    useRouteErrorSpy.mockReturnValue(mockErrorResponse)
-    isRouterErrorSpy.mockReturnValue(true)
+    useRouteErrorMock.mockReturnValue(mockErrorResponse)
+    isRouteErrorResponseMock.mockReturnValue(true)
 
     render(<ErrorBoundary />)
 
@@ -30,25 +35,25 @@ test.only("shows route error", () => {
 })
 
 test("shows javascript error", () => {
-    const mockError: Error = {
-        name: "Error",
-        message: "Something went wrong",
-        stack: "at FunctionName (file.js:1:1)",
-        cause: "Unknown",
-    }
+    const mockError = new Error("Something went wrong", {cause: "Unknown"})
 
-    useRouteErrorSpy.mockReturnValue(mockError)
-    isRouterErrorSpy.mockReturnValue(false)
+    useRouteErrorMock.mockReturnValue(mockError)
+    isRouteErrorResponseMock.mockReturnValue(false)
 
     render(<ErrorBoundary />)
 
     expect(screen.getByText(mockError.message)).toBeInTheDocument()
-    expect(screen.getByText(mockError.stack as string)).toBeInTheDocument()
+
+    expect(
+        screen.getByText("Error: Something went wrong", {exact: false}),
+    ).toBeInTheDocument()
+
+    expect(screen.getByText("at file://", {exact: false})).toBeInTheDocument()
 })
 
 test("shows unknown error", () => {
-    useRouteErrorSpy.mockReturnValue("Something went wrong")
-    isRouterErrorSpy.mockReturnValue(false)
+    useRouteErrorMock.mockReturnValue("Something went wrong")
+    isRouteErrorResponseMock.mockReturnValue(false)
 
     render(<ErrorBoundary />)
 

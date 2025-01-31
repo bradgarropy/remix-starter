@@ -36,6 +36,12 @@ _YYYY-MM-DD_
 
 - _TBD_
 
+## [4.7.0][4.7.0]
+
+_2025-01-30_
+
+- Add root [`ErrorBoundary`][error-boundary]
+
 ## [4.6.0][4.6.0]
 
 _2025-01-29_
@@ -90,6 +96,7 @@ _2024-12-10_
 - Remove [`@remix-run/eslint-config`][remix-run-eslint-config]
 
 [unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.6.0...HEAD
+[4.7.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.7.0
 [4.6.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.6.0
 [4.5.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.5.0
 [4.4.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.4.0
@@ -114,3 +121,4 @@ _2024-12-10_
 [vercel-config]: https://vercel.com/docs/projects/project-configuration
 [vitest-3]: https://vitest.dev/guide/migration.html#vitest-3
 [tailwind-v4]: https://tailwindcss.com/docs/upgrade-guide
+[error-boundary]: https://remix.run/docs/en/main/route/error-boundary

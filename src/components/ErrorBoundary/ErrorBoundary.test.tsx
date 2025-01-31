@@ -16,7 +16,7 @@ const isRouteErrorResponseMock = vitest.mocked(isRouteErrorResponse)
 test("shows route error", () => {
     const mockErrorResponse: ErrorResponse = {
         status: 500,
-        statusText: "Internal Server Error",
+        statusText: "Internal server error",
         data: "Something went wrong",
     }
 
@@ -25,13 +25,8 @@ test("shows route error", () => {
 
     render(<ErrorBoundary />)
 
-    expect(
-        screen.getByText(
-            `${mockErrorResponse.status} ${mockErrorResponse.statusText}`,
-        ),
-    ).toBeInTheDocument()
-
-    expect(screen.getByText(mockErrorResponse.data)).toBeInTheDocument()
+    expect(screen.getByText("500 Internal server error")).toBeInTheDocument()
+    expect(screen.getByText("Something went wrong")).toBeInTheDocument()
 })
 
 test("shows javascript error", () => {

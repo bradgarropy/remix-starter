@@ -9,7 +9,7 @@ const ErrorBoundary = () => {
         return (
             <div className="w-screen h-screen grid place-content-center p-16">
                 <h1 className="text-3xl font-bold mb-2">
-                    {error.status} {error.statusText}
+                    {`${error.status} ${error.statusText}`}
                 </h1>
 
                 <pre className="overflow-auto">{error.data}</pre>
@@ -21,7 +21,7 @@ const ErrorBoundary = () => {
         return (
             <div className="w-screen h-screen grid place-content-center p-16">
                 <h1 className="text-3xl font-bold mb-2">
-                    Error: {error.message}
+                    {`Error: ${error.message}`}
                 </h1>
 
                 <pre className="overflow-auto">{createErrorStack(error)}</pre>

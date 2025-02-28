@@ -36,6 +36,12 @@ _YYYY-MM-DD_
 
 - _TBD_
 
+## [4.9.0][4.9.0]
+
+_2025-02-27_
+
+- Automate terminals with [vscode tasks][vscode-tasks]
+
 ## [4.8.0][4.8.0]
 
 _2025-02-26_
@@ -101,7 +107,8 @@ _2024-12-10_
     - [`v3_singleFetch`][v3-singleFetch]
 - Remove [`@remix-run/eslint-config`][remix-run-eslint-config]
 
-[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.8.0...HEAD
+[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.9.0...HEAD
+[4.9.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.9.0
 [4.8.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.8.0
 [4.7.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.7.0
 [4.6.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.6.0
@@ -130,3 +137,4 @@ _2024-12-10_
 [tailwind-v4]: https://tailwindcss.com/docs/upgrade-guide
 [error-boundary]: https://remix.run/docs/en/main/route/error-boundary
 [github-actions]: https://github.com/features/actions
+[vscode-tasks]: https://code.visualstudio.com/docs/terminal/basics#_automating-terminals-with-tasks

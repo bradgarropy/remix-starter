@@ -36,6 +36,12 @@ _YYYY-MM-DD_
 
 - _TBD_
 
+## [4.10.0][4.10.0]
+
+_2025-04-23_
+
+- Use React [metadata tags][metadata]
+
 ## [4.9.0][4.9.0]
 
 _2025-02-27_
@@ -107,7 +113,8 @@ _2024-12-10_
     - [`v3_singleFetch`][v3-singleFetch]
 - Remove [`@remix-run/eslint-config`][remix-run-eslint-config]
 
-[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.9.0...HEAD
+[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.10.0...HEAD
+[4.10.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.10.0
 [4.9.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.9.0
 [4.8.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.8.0
 [4.7.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.7.0
@@ -138,3 +145,4 @@ _2024-12-10_
 [error-boundary]: https://remix.run/docs/en/main/route/error-boundary
 [github-actions]: https://github.com/features/actions
 [vscode-tasks]: https://code.visualstudio.com/docs/terminal/basics#_automating-terminals-with-tasks
+[metadata]: https://react.dev/blog/2024/12/05/react-19#support-for-metadata-tags

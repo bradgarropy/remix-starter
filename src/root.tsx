@@ -51,6 +51,7 @@ export const ErrorBoundary = () => {
         <html lang="en">
             <head>
                 <title>💿 remix starter</title>
+                <link rel="stylesheet" href={tailwindStyles} />
                 <meta charSet="utf-8" />
 
                 <meta

@@ -36,6 +36,12 @@ _YYYY-MM-DD_
 
 - _TBD_
 
+## [4.10.1][4.10.1]
+
+_2025-04-24_
+
+- Link Tailwind styles in `root`
+
 ## [4.10.0][4.10.0]
 
 _2025-04-23_
@@ -113,7 +119,8 @@ _2024-12-10_
     - [`v3_singleFetch`][v3-singleFetch]
 - Remove [`@remix-run/eslint-config`][remix-run-eslint-config]
 
-[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.10.0...HEAD
+[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.10.1...HEAD
+[4.10.1]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.10.1
 [4.10.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.10.0
 [4.9.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.9.0
 [4.8.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.8.0

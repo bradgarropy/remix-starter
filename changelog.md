@@ -36,6 +36,12 @@ _YYYY-MM-DD_
 
 - _TBD_
 
+## [4.10.2][4.10.2]
+
+_2025-04-25_
+
+- Support TypeScript's [`erasableSyntaxOnly`][erasable-syntax-only] configuration
+
 ## [4.10.1][4.10.1]
 
 _2025-04-24_
@@ -119,7 +125,8 @@ _2024-12-10_
     - [`v3_singleFetch`][v3-singleFetch]
 - Remove [`@remix-run/eslint-config`][remix-run-eslint-config]
 
-[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.10.1...HEAD
+[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.10.2...HEAD
+[4.10.2]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.10.2
 [4.10.1]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.10.1
 [4.10.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.10.0
 [4.9.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.9.0
@@ -153,3 +160,4 @@ _2024-12-10_
 [github-actions]: https://github.com/features/actions
 [vscode-tasks]: https://code.visualstudio.com/docs/terminal/basics#_automating-terminals-with-tasks
 [metadata]: https://react.dev/blog/2024/12/05/react-19#support-for-metadata-tags
+[erasable-syntax-only]: https://typescriptlang.org/tsconfig/#erasableSyntaxOnly

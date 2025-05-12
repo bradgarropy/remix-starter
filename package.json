@@ -87,8 +87,5 @@
         "vite-tsconfig-paths": "^5.0.1",
         "vitest": "^3.0.4"
     },
-    "engines": {
-        "node": ">=22"
-    },
     "sideEffects": false
 }

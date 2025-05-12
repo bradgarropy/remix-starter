@@ -18,7 +18,7 @@
         "skipLibCheck": true,
         "strict": true,
         "target": "ESNext",
-        "types": []
+        "types": ["@remix-run/node", "vite/client"]
     },
     "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "env.d.ts"]
 }

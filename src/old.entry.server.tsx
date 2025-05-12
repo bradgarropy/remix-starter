@@ -1,10 +1,10 @@
 import {PassThrough} from "node:stream"
 
-import {RemixServer} from "@remix-run/react"
 import * as Sentry from "@sentry/remix"
 import {isbot} from "isbot"
 import {renderToPipeableStream} from "react-dom/server"
 import type {EntryContext} from "react-router"
+import {ServerRouter} from "react-router"
 import {createReadableStreamFromReadable} from "react-router"
 
 import {createRelease} from "~/utils/sentry"
@@ -23,20 +23,20 @@ const handleRequest = (
     request: Request,
     responseStatusCode: number,
     responseHeaders: Headers,
-    remixContext: EntryContext,
+    reactRouterContext: EntryContext,
 ) => {
     return isbot(request.headers.get("user-agent") ?? "")
         ? handleBotRequest(
               request,
               responseStatusCode,
               responseHeaders,
-              remixContext,
+              reactRouterContext,
           )
         : handleBrowserRequest(
               request,
               responseStatusCode,
               responseHeaders,
-              remixContext,
+              reactRouterContext,
           )
 }
 
@@ -44,13 +44,13 @@ const handleBotRequest = (
     request: Request,
     responseStatusCode: number,
     responseHeaders: Headers,
-    remixContext: EntryContext,
+    reactRouterContext: EntryContext,
 ) => {
     return new Promise((resolve, reject) => {
         let shellRendered = false
         const {pipe, abort} = renderToPipeableStream(
-            <RemixServer
-                context={remixContext}
+            <ServerRouter
+                context={reactRouterContext}
                 url={request.url}
                 abortDelay={streamTimeout}
             />,
@@ -94,13 +94,13 @@ const handleBrowserRequest = (
     request: Request,
     responseStatusCode: number,
     responseHeaders: Headers,
-    remixContext: EntryContext,
+    reactRouterContext: EntryContext,
 ) => {
     return new Promise((resolve, reject) => {
         let shellRendered = false
         const {pipe, abort} = renderToPipeableStream(
-            <RemixServer
-                context={remixContext}
+            <ServerRouter
+                context={reactRouterContext}
                 url={request.url}
                 abortDelay={streamTimeout}
             />,

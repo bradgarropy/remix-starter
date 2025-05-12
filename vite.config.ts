@@ -1,5 +1,4 @@
 import {vitePlugin as remix} from "@remix-run/dev"
-import {installGlobals} from "@remix-run/node"
 import {sentryVitePlugin as sentry} from "@sentry/vite-plugin"
 import tailwind from "@tailwindcss/vite"
 import react from "@vitejs/plugin-react"
@@ -8,8 +7,6 @@ import tsconfigPaths from "vite-tsconfig-paths"
 import {defineConfig} from "vitest/config"
 
 import {createRelease} from "./src/utils/sentry"
-
-installGlobals()
 
 declare module "@remix-run/node" {
     interface Future {

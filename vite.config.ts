@@ -6,7 +6,7 @@ import {reactRouterDevTools} from "react-router-devtools"
 import tsconfigPaths from "vite-tsconfig-paths"
 import {defineConfig} from "vitest/config"
 
-import {createRelease} from "~/utils/sentry"
+import {createRelease} from "./src/utils/sentry"
 
 const config = defineConfig({
     build: {

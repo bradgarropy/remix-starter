@@ -53,7 +53,8 @@
         "@sentry/remix": "^8.33.1",
         "isbot": "^5.1.1",
         "react": "^19.0.0",
-        "react-dom": "^19.0.0"
+        "react-dom": "^19.0.0",
+        "react-router": "^7.6.0"
     },
     "devDependencies": {
         "@bradgarropy/eslint-config": "^3.0.0",

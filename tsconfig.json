@@ -15,10 +15,17 @@
             "~/*": ["./src/*"]
         },
         "resolveJsonModule": true,
+        "rootDirs": [".", "./.react-router/types"],
         "skipLibCheck": true,
         "strict": true,
         "target": "ESNext",
-        "types": ["@remix-run/node", "vite/client"]
+        "types": ["@react-router/node", "vite/client"]
     },
-    "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "env.d.ts"]
+    "include": [
+        ".react-router/types/**/*",
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx"
+    ]
 }

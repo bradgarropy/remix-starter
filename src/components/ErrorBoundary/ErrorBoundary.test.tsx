@@ -1,11 +1,11 @@
-import type {ErrorResponse} from "@remix-run/react"
-import {isRouteErrorResponse, useRouteError} from "@remix-run/react"
 import {render, screen} from "@testing-library/react"
+import type {ErrorResponse} from "react-router"
+import {isRouteErrorResponse, useRouteError} from "react-router"
 import {expect, test, vitest} from "vitest"
 
 import ErrorBoundary from "~/components/ErrorBoundary"
 
-vitest.mock("@remix-run/react", () => ({
+vitest.mock("react-router", () => ({
     useRouteError: vitest.fn(),
     isRouteErrorResponse: vitest.fn(),
 }))

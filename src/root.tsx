@@ -1,5 +1,5 @@
-import {Links, Meta, Outlet, Scripts, ScrollRestoration} from "@remix-run/react"
 import {withSentry} from "@sentry/remix"
+import {Links, Meta, Outlet, Scripts, ScrollRestoration} from "react-router"
 
 import Error from "~/components/ErrorBoundary"
 import Footer from "~/components/Footer"

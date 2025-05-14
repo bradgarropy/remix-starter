@@ -49,7 +49,7 @@
     },
     "dependencies": {
         "@react-router/node": "^7.0.0",
-        "@sentry/remix": "^8.33.1",
+        "@sentry/react-router": "^9.19.0",
         "isbot": "^5.1.1",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",

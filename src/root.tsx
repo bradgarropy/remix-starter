@@ -1,4 +1,3 @@
-import {withSentry} from "@sentry/remix"
 import {Links, Meta, Outlet, Scripts, ScrollRestoration} from "react-router"
 
 import Error from "~/components/ErrorBoundary"
@@ -77,4 +76,4 @@ export const ErrorBoundary = () => {
     )
 }
 
-export default withSentry(App)
+export default App

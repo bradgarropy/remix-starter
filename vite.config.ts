@@ -4,7 +4,6 @@ import {sentryVitePlugin as sentry} from "@sentry/vite-plugin"
 import tailwind from "@tailwindcss/vite"
 import react from "@vitejs/plugin-react"
 import {remixDevTools} from "remix-development-tools"
-import tsconfigPaths from "vite-tsconfig-paths"
 import {defineConfig} from "vitest/config"
 
 import {createRelease} from "./src/utils/sentry"
@@ -22,7 +21,6 @@ const config = defineConfig({
         sourcemap: true,
     },
     plugins: [
-        tsconfigPaths(),
         tailwind(),
         remixDevTools({
             client: {
@@ -63,6 +61,9 @@ const config = defineConfig({
               })
             : null,
     ],
+    resolve: {
+        tsconfigPaths: true,
+    },
     server: {
         open: true,
         port: 3000,
@@ -70,7 +71,6 @@ const config = defineConfig({
     test: {
         clearMocks: true,
         coverage: {
-            all: false,
             clean: true,
             enabled: true,
             provider: "v8",

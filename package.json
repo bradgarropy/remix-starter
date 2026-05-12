@@ -50,7 +50,7 @@
         "@remix-run/node": "^2.2.0",
         "@remix-run/react": "^2.2.0",
         "@remix-run/vercel": "^1.19.3",
-        "@sentry/remix": "^8.33.1",
+        "@sentry/remix": "^10.53.0",
         "isbot": "^5.1.1",
         "react": "^19.0.0",
         "react-dom": "^19.0.0"
@@ -62,7 +62,7 @@
         "@remix-run/dev": "^2.2.0",
         "@remix-run/route-config": "^2.15.1",
         "@remix-run/serve": "^2.2.0",
-        "@sentry/vite-plugin": "^2.22.5",
+        "@sentry/vite-plugin": "^5.3.0",
         "@tailwindcss/vite": "^4.0.0",
         "@testing-library/dom": "^10.4.0",
         "@testing-library/jest-dom": "^6.1.4",

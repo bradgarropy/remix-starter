@@ -1,16 +1,17 @@
-import {vitePlugin as remix} from "@remix-run/dev"
-import {installGlobals} from "@remix-run/node"
+import {
+    cloudflareDevProxyVitePlugin as remixCloudflareDevProxy,
+    vitePlugin as remix,
+} from "@remix-run/dev"
 import {sentryVitePlugin as sentry} from "@sentry/vite-plugin"
 import tailwind from "@tailwindcss/vite"
 import react from "@vitejs/plugin-react"
 import {remixDevTools} from "remix-development-tools"
 import {defineConfig} from "vitest/config"
 
+import {getLoadContext} from "./src/loadContext"
 import {createRelease} from "./src/utils/sentry"
 
-installGlobals()
-
-declare module "@remix-run/node" {
+declare module "@remix-run/cloudflare" {
     interface Future {
         v3_singleFetch: true
     }
@@ -27,21 +28,23 @@ const config = defineConfig({
                 showBreakpointIndicator: false,
             },
         }),
-        process.env.VITEST
-            ? react()
-            : remix({
-                  appDirectory: "src",
-                  ignoredRouteFiles: ["**/.*"],
-                  future: {
-                      v3_fetcherPersist: true,
-                      v3_relativeSplatPath: true,
-                      v3_throwAbortReason: true,
-                      v3_lazyRouteDiscovery: true,
-                      v3_singleFetch: true,
-                      v3_routeConfig: true,
-                  },
-                  serverModuleFormat: "esm",
-              }),
+        ...(process.env.VITEST
+            ? [react()]
+            : [
+                  remixCloudflareDevProxy({getLoadContext}),
+                  remix({
+                      appDirectory: "src",
+                      ignoredRouteFiles: ["**/.*"],
+                      future: {
+                          v3_fetcherPersist: true,
+                          v3_relativeSplatPath: true,
+                          v3_throwAbortReason: true,
+                          v3_lazyRouteDiscovery: true,
+                          v3_singleFetch: true,
+                          v3_routeConfig: true,
+                      },
+                  }),
+              ]),
         process.env.SENTRY_AUTH_TOKEN
             ? sentry({
                   authToken: process.env.SENTRY_AUTH_TOKEN,
@@ -63,6 +66,12 @@ const config = defineConfig({
     ],
     resolve: {
         tsconfigPaths: true,
+        mainFields: ["browser", "module", "main"],
+    },
+    ssr: {
+        resolve: {
+            conditions: ["workerd", "worker", "browser"],
+        },
     },
     server: {
         open: true,

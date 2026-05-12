@@ -1,11 +1,8 @@
-import {PassThrough} from "node:stream"
-
-import type {EntryContext} from "@remix-run/node"
-import {createReadableStreamFromReadable} from "@remix-run/node"
+import type {AppLoadContext, EntryContext} from "@remix-run/cloudflare"
 import {RemixServer} from "@remix-run/react"
 import * as Sentry from "@sentry/remix"
 import {isbot} from "isbot"
-import {renderToPipeableStream} from "react-dom/server"
+import {renderToReadableStream} from "react-dom/server"
 
 import {createRelease} from "~/utils/sentry"
 
@@ -24,6 +21,8 @@ const handleRequest = (
     responseStatusCode: number,
     responseHeaders: Headers,
     remixContext: EntryContext,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    loadContext: AppLoadContext,
 ) => {
     return isbot(request.headers.get("user-agent") ?? "")
         ? handleBotRequest(
@@ -40,103 +39,80 @@ const handleRequest = (
           )
 }
 
-const handleBotRequest = (
+const handleBotRequest = async (
     request: Request,
     responseStatusCode: number,
     responseHeaders: Headers,
     remixContext: EntryContext,
 ) => {
-    return new Promise((resolve, reject) => {
-        let shellRendered = false
-        const {pipe, abort} = renderToPipeableStream(
-            <RemixServer
-                context={remixContext}
-                url={request.url}
-                abortDelay={streamTimeout}
-            />,
-            {
-                onAllReady() {
-                    shellRendered = true
-                    const body = new PassThrough()
-                    const stream = createReadableStreamFromReadable(body)
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), streamTimeout)
 
-                    responseHeaders.set("Content-Type", "text/html")
+    let didError = false
 
-                    resolve(
-                        new Response(stream, {
-                            headers: responseHeaders,
-                            status: responseStatusCode,
-                        }),
-                    )
-
-                    pipe(body)
-                },
-                onShellError(error: unknown) {
-                    reject(error)
-                },
-                onError(error: unknown) {
-                    responseStatusCode = 500
-                    // Log streaming rendering errors from inside the shell.  Don't log
-                    // errors encountered during initial shell rendering since they'll
-                    // reject and get logged in handleDocumentRequest.
-                    if (shellRendered) {
-                        console.error(error)
-                    }
-                },
+    const body = await renderToReadableStream(
+        <RemixServer
+            context={remixContext}
+            url={request.url}
+            abortDelay={streamTimeout}
+        />,
+        {
+            signal: controller.signal,
+            onError(error: unknown) {
+                didError = true
+                if (!controller.signal.aborted) {
+                    console.error(error)
+                }
             },
-        )
+        },
+    )
 
-        setTimeout(abort, streamTimeout)
+    // Bots wait for the entire stream so they get fully-rendered HTML.
+    await body.allReady
+    clearTimeout(timeoutId)
+
+    responseHeaders.set("Content-Type", "text/html")
+    return new Response(body, {
+        headers: responseHeaders,
+        status: didError ? 500 : responseStatusCode,
     })
 }
 
-const handleBrowserRequest = (
+const handleBrowserRequest = async (
     request: Request,
     responseStatusCode: number,
     responseHeaders: Headers,
     remixContext: EntryContext,
 ) => {
-    return new Promise((resolve, reject) => {
-        let shellRendered = false
-        const {pipe, abort} = renderToPipeableStream(
-            <RemixServer
-                context={remixContext}
-                url={request.url}
-                abortDelay={streamTimeout}
-            />,
-            {
-                onShellReady() {
-                    shellRendered = true
-                    const body = new PassThrough()
-                    const stream = createReadableStreamFromReadable(body)
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), streamTimeout)
 
-                    responseHeaders.set("Content-Type", "text/html")
+    let didError = false
 
-                    resolve(
-                        new Response(stream, {
-                            headers: responseHeaders,
-                            status: responseStatusCode,
-                        }),
-                    )
-
-                    pipe(body)
-                },
-                onShellError(error: unknown) {
-                    reject(error)
-                },
-                onError(error: unknown) {
-                    responseStatusCode = 500
-                    // Log streaming rendering errors from inside the shell.  Don't log
-                    // errors encountered during initial shell rendering since they'll
-                    // reject and get logged in handleDocumentRequest.
-                    if (shellRendered) {
-                        console.error(error)
-                    }
-                },
+    const body = await renderToReadableStream(
+        <RemixServer
+            context={remixContext}
+            url={request.url}
+            abortDelay={streamTimeout}
+        />,
+        {
+            signal: controller.signal,
+            onError(error: unknown) {
+                didError = true
+                if (!controller.signal.aborted) {
+                    console.error(error)
+                }
             },
-        )
+        },
+    )
 
-        setTimeout(abort, streamTimeout + 1000)
+    // Browsers stream as soon as the shell is ready; allReady fires later in background.
+    body.allReady.then(() => clearTimeout(timeoutId))
+
+    responseHeaders.set("Content-Type", "text/html")
+    return new Response(body, {
+        headers: responseHeaders,
+        status: didError ? 500 : responseStatusCode,
     })
 }
 

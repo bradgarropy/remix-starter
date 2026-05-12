@@ -2,7 +2,7 @@
 
 _A [Remix][remix] starter with [ESLint][eslint], [Prettier][prettier], [TypeScript][typescript], [Vitest][vitest], and [Tailwind][tailwind] included._
 
-[![vercel][vercel-badge]][vercel]
+[![cloudflare][cloudflare-badge]][cloudflare]
 [![github actions][github-actions-badge]][github-actions]
 [![codecov][codecov-badge]][codecov]
 [![contributing][contributing-badge]][contributing]
@@ -10,7 +10,7 @@ _A [Remix][remix] starter with [ESLint][eslint], [Prettier][prettier], [TypeScri
 [![discord][discord-badge]][discord]
 
 <p align="center">
-    <a href="https://remix-starter-bradgarropy.vercel.app">
+    <a href="https://github.com/bradgarropy/remix-starter/deployments">
         <img alt="remix starter" src="./public/github.png" width="800">
     </a>
 </p>
@@ -31,10 +31,12 @@ _A [Remix][remix] starter with [ESLint][eslint], [Prettier][prettier], [TypeScri
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-[vercel]: https://vercel.com/bradgarropy/remix-starter
-[vercel-badge]: https://img.shields.io/github/deployments/bradgarropy/remix-starter/production?label=vercel&style=flat-square
+<!-- TODO: Update [cloudflare] to the live Worker URL once deployed (e.g., https://remix-starter.<subdomain>.workers.dev) -->
+
+[cloudflare]: #
+[cloudflare-badge]: https://img.shields.io/badge/cloudflare-workers-orange?style=flat-square&logo=cloudflare
 [github-actions]: https://github.com/bradgarropy/remix-starter/actions
-[github-actions-badge]: https://img.shields.io/github/workflow/status/bradgarropy/remix-starter/%F0%9F%A7%AA%20test?style=flat-square
+[github-actions-badge]: https://img.shields.io/github/actions/workflow/status/bradgarropy/remix-starter/ci.yml?branch=main&label=github&logo=github&style=flat-square
 [codecov]: https://app.codecov.io/gh/bradgarropy/remix-starter
 [codecov-badge]: https://img.shields.io/codecov/c/github/bradgarropy/remix-starter?style=flat-square
 [contributing]: https://github.com/bradgarropy/remix-starter/blob/main/contributing.md

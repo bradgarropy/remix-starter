@@ -1,0 +1,23 @@
+wrangler.jsonc
+  cb27559aa82fa3af 10-12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.8",
+  "base_commit_sha": "a851200437ceba8f686f1a184c4b8adb17705c6a",
+  "prompts": {
+    "cb27559aa82fa3af": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1e2d0bae1ffepIJ8JdBjjW5SmW",
+        "model": "anthropic/claude-opus-4-7"
+      },
+      "human_author": "Brad Garropy",
+      "messages": [],
+      "total_additions": 3,
+      "total_deletions": 0,
+      "accepted_lines": 3,
+      "overriden_lines": 0
+    }
+  }
+}

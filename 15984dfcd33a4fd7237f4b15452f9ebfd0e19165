@@ -1,0 +1,23 @@
+src/worker.ts
+  cb27559aa82fa3af 3-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.8",
+  "base_commit_sha": "15984dfcd33a4fd7237f4b15452f9ebfd0e19165",
+  "prompts": {
+    "cb27559aa82fa3af": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1e2d0bae1ffepIJ8JdBjjW5SmW",
+        "model": "anthropic/claude-opus-4-7"
+      },
+      "human_author": "Brad Garropy",
+      "messages": [],
+      "total_additions": 2,
+      "total_deletions": 0,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import {data} from "@remix-run/cloudflare"
+import {data} from "react-router"
 
 const loader = () => {
     return data({message: "world"}, {status: 200})

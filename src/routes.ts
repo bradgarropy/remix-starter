@@ -1,5 +1,5 @@
-import type {RouteConfig} from "@remix-run/route-config"
-import {index, route} from "@remix-run/route-config"
+import type {RouteConfig} from "@react-router/dev/routes"
+import {index, route} from "@react-router/dev/routes"
 
 const routes: RouteConfig = [
     index("./routes/index.tsx"),

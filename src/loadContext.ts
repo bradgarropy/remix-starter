@@ -11,6 +11,7 @@ type GetLoadContextArgs = {
 }
 
 declare module "@remix-run/cloudflare" {
+    // eslint-disable-next-line @typescript-eslint/no-empty-object-type
     interface AppLoadContext extends ReturnType<typeof getLoadContext> {}
 }
 

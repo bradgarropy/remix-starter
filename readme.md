@@ -10,7 +10,7 @@ _A [Remix][remix] starter with [ESLint][eslint], [Prettier][prettier], [TypeScri
 [![discord][discord-badge]][discord]
 
 <p align="center">
-    <a href="https://github.com/bradgarropy/remix-starter/deployments">
+    <a href="https://remix-starter.bradgarropy.workers.dev">
         <img alt="remix starter" src="./public/github.png" width="800">
     </a>
 </p>
@@ -33,7 +33,7 @@ _A [Remix][remix] starter with [ESLint][eslint], [Prettier][prettier], [TypeScri
 
 <!-- TODO: Update [cloudflare] to the live Worker URL once deployed (e.g., https://remix-starter.<subdomain>.workers.dev) -->
 
-[cloudflare]: #
+[cloudflare]: https://dash.cloudflare.com/b70a6ce696a1cb0e9055f8213f4146ee/workers/services/view/remix-starter/production
 [cloudflare-badge]: https://img.shields.io/badge/cloudflare-workers-orange?style=flat-square&logo=cloudflare
 [github-actions]: https://github.com/bradgarropy/remix-starter/actions
 [github-actions-badge]: https://img.shields.io/github/actions/workflow/status/bradgarropy/remix-starter/ci.yml?branch=main&label=github&logo=github&style=flat-square

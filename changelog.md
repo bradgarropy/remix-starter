@@ -36,6 +36,12 @@ _YYYY-MM-DD_
 
 - _TBD_
 
+## [5.0.0][5.0.0]
+
+_2026-05-12_
+
+- Migrate from [Vercel][vercel] to [Cloudflare][cloudflare]
+
 ## [4.10.2][4.10.2]
 
 _2025-04-25_
@@ -161,3 +167,5 @@ _2024-12-10_
 [vscode-tasks]: https://code.visualstudio.com/docs/terminal/basics#_automating-terminals-with-tasks
 [metadata]: https://react.dev/blog/2024/12/05/react-19#support-for-metadata-tags
 [erasable-syntax-only]: https://typescriptlang.org/tsconfig/#erasableSyntaxOnly
+[vercel]: https://vercel.com
+[cloudflare]: https://cloudflare.com

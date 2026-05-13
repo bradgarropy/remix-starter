@@ -1,6 +1,6 @@
-# � react router starter
+# 📍 react router starter
 
-_A [Remix][remix] starter with [ESLint][eslint], [Prettier][prettier], [TypeScript][typescript], [Vitest][vitest], and [Tailwind][tailwind] included._
+_A [React Router][react-router] starter with [ESLint][eslint], [Prettier][prettier], [TypeScript][typescript], [Vitest][vitest], and [Tailwind][tailwind] included._
 
 [![cloudflare][cloudflare-badge]][cloudflare]
 [![github actions][github-actions-badge]][github-actions]
@@ -50,4 +50,4 @@ _A [Remix][remix] starter with [ESLint][eslint], [Prettier][prettier], [TypeScri
 [typescript]: https://typescriptlang.org
 [vitest]: https://vitest.dev
 [tailwind]: https://tailwindcss.com
-[remix]: https://remix.run
+[react-router]: https://reactrouter.com

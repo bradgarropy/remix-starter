@@ -1,5 +1,7 @@
 import {createRequestHandler, type ServerBuild} from "@remix-run/cloudflare"
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore - build/server doesn't exist until after `remix vite:build`
 import * as build from "../build/server"
 import {getLoadContext} from "./loadContext"
 

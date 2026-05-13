@@ -1,6 +1,6 @@
 {
     "name": "remix-starter",
-    "version": "4.10.2",
+    "version": "5.0.0",
     "description": "💿 remix starter",
     "type": "module",
     "keywords": [
@@ -9,7 +9,7 @@
         "eslint",
         "prettier",
         "vitest",
-        "vercel",
+        "cloudflare",
         "remix",
         "remix-stack",
         "tailwind",
@@ -32,12 +32,15 @@
     "scripts": {
         "dev": "remix vite:dev",
         "build": "remix vite:build",
-        "start": "remix-serve build/server/index.js",
+        "start": "wrangler dev",
+        "preview": "npm run build && wrangler dev",
+        "deploy": "wrangler deploy",
+        "typegen": "wrangler types",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "format": "prettier --check .",
         "format:fix": "prettier --write .",
-        "typecheck": "tsc",
+        "typecheck": "wrangler types && tsc",
         "test": "vitest --coverage",
         "test:ui": "vitest --coverage --watch --ui",
         "test:watch": "vitest --coverage --watch",
@@ -47,9 +50,8 @@
         "new": "plop"
     },
     "dependencies": {
-        "@remix-run/node": "^2.2.0",
+        "@remix-run/cloudflare": "^2.17.2",
         "@remix-run/react": "^2.2.0",
-        "@remix-run/vercel": "^1.19.3",
         "@sentry/remix": "^10.53.0",
         "isbot": "^5.1.1",
         "react": "^19.0.0",
@@ -61,7 +63,6 @@
         "@playwright/test": "^1.48.0",
         "@remix-run/dev": "^2.2.0",
         "@remix-run/route-config": "^2.15.1",
-        "@remix-run/serve": "^2.2.0",
         "@sentry/vite-plugin": "^5.3.0",
         "@tailwindcss/vite": "^4.0.0",
         "@testing-library/dom": "^10.4.0",
@@ -84,10 +85,11 @@
         "tailwindcss": "^4.0.0",
         "typescript": "^6.0.3",
         "vite": "^8.0.12",
-        "vitest": "^4.1.6"
+        "vitest": "^4.1.6",
+        "wrangler": "^4.0.0"
     },
     "engines": {
-        "node": ">=14"
+        "node": ">=20"
     },
     "sideEffects": false
 }

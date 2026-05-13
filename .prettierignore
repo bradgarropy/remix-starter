@@ -6,6 +6,10 @@
 /build
 /public/build
 
+# cloudflare
+/.wrangler
+worker-configuration.d.ts
+
 # test
 /coverage
 

@@ -1,6 +1,6 @@
 {
     "$schema": "node_modules/wrangler/config-schema.json",
-    "name": "remix-starter",
+    "name": "react-router-starter",
     "compatibility_date": "2025-10-08",
     "compatibility_flags": ["nodejs_compat"],
     "main": "./src/worker.ts",

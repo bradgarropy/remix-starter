@@ -10,7 +10,7 @@ const App = () => {
     return (
         <html lang="en">
             <head>
-                <title>💿 remix starter</title>
+                <title>📍 react router starter</title>
                 <link rel="stylesheet" href={tailwindStyles} />
                 <meta charSet="utf-8" />
 
@@ -50,7 +50,7 @@ export const ErrorBoundary = () => {
     return (
         <html lang="en">
             <head>
-                <title>💿 remix starter</title>
+                <title>📍 react router starter</title>
                 <link rel="stylesheet" href={tailwindStyles} />
                 <meta charSet="utf-8" />
 

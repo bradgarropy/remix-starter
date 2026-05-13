@@ -1,7 +1,7 @@
 {
-    "name": "remix-starter",
+    "name": "react-router-starter",
     "version": "5.0.0",
-    "description": "💿 remix starter",
+    "description": "📍 react router starter",
     "type": "module",
     "keywords": [
         "typescript",
@@ -15,9 +15,9 @@
         "tailwind",
         "hacktoberfest"
     ],
-    "homepage": "https://github.com/bradgarropy/remix-starter",
+    "homepage": "https://github.com/bradgarropy/react-router-starter",
     "bugs": {
-        "url": "https://github.com/bradgarropy/remix-starter/issues"
+        "url": "https://github.com/bradgarropy/react-router-starter/issues"
     },
     "license": "MIT",
     "author": {
@@ -27,7 +27,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/bradgarropy/remix-starter"
+        "url": "https://github.com/bradgarropy/react-router-starter"
     },
     "scripts": {
         "dev": "remix vite:dev",

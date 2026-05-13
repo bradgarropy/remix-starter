@@ -131,20 +131,20 @@ _2024-12-10_
     - [`v3_singleFetch`][v3-singleFetch]
 - Remove [`@remix-run/eslint-config`][remix-run-eslint-config]
 
-[unreleased]: https://github.com/bradgarropy/remix-starter/compare/v4.10.2...HEAD
-[4.10.2]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.10.2
-[4.10.1]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.10.1
-[4.10.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.10.0
-[4.9.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.9.0
-[4.8.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.8.0
-[4.7.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.7.0
-[4.6.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.6.0
-[4.5.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.5.0
-[4.4.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.4.0
-[4.3.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.3.0
-[4.2.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.2.0
-[4.1.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.1.0
-[4.0.0]: https://github.com/bradgarropy/remix-starter/releases/tag/v4.0.0
+[unreleased]: https://github.com/bradgarropy/react-router-starter/compare/v4.10.2...HEAD
+[4.10.2]: https://github.com/bradgarropy/react-router-starter/releases/tag/v4.10.2
+[4.10.1]: https://github.com/bradgarropy/react-router-starter/releases/tag/v4.10.1
+[4.10.0]: https://github.com/bradgarropy/react-router-starter/releases/tag/v4.10.0
+[4.9.0]: https://github.com/bradgarropy/react-router-starter/releases/tag/v4.9.0
+[4.8.0]: https://github.com/bradgarropy/react-router-starter/releases/tag/v4.8.0
+[4.7.0]: https://github.com/bradgarropy/react-router-starter/releases/tag/v4.7.0
+[4.6.0]: https://github.com/bradgarropy/react-router-starter/releases/tag/v4.6.0
+[4.5.0]: https://github.com/bradgarropy/react-router-starter/releases/tag/v4.5.0
+[4.4.0]: https://github.com/bradgarropy/react-router-starter/releases/tag/v4.4.0
+[4.3.0]: https://github.com/bradgarropy/react-router-starter/releases/tag/v4.3.0
+[4.2.0]: https://github.com/bradgarropy/react-router-starter/releases/tag/v4.2.0
+[4.1.0]: https://github.com/bradgarropy/react-router-starter/releases/tag/v4.1.0
+[4.0.0]: https://github.com/bradgarropy/react-router-starter/releases/tag/v4.0.0
 [keep-a-changelog]: https://keepachangelog.com
 [semver]: https://semver.org
 [react-19]: https://react.dev/blog/2024/12/05/react-19
@@ -156,7 +156,7 @@ _2024-12-10_
 [v3-singleFetch]: https://remix.run/docs/en/main/start/future-flags#v3_singlefetch
 [v3-routeConfig]: https://remix.run/docs/en/main/start/future-flags#v3_routeconfig
 [remix-run-eslint-config]: https://remix.run/docs/en/main/start/future-flags#remix-runeslint-config
-[api-hello]: https://remix-starter-bradgarropy.vercel.app/api/hello
+[api-hello]: https://react-router-starter-bradgarropy.vercel.app/api/hello
 [remix-development-tools]: https://remix-development-tools.fly.dev
 [codecov-action]: https://github.com/codecov/codecov-action
 [vercel-config]: https://vercel.com/docs/projects/project-configuration

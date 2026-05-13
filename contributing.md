@@ -21,13 +21,13 @@ In order to submit a pull request, you'll have to setup your own development env
 Then you can clone the forked repository to your system.
 
 ```bash
-git clone https://github.com/<username>/remix-starter
+git clone https://github.com/<username>/react-router-starter
 ```
 
 Next you need to install the dependencies.
 
 ```bash
-cd remix-starter
+cd react-router-starter
 npm install
 ```
 
@@ -92,7 +92,7 @@ I appreciate any and all types of contributions to this project! Contributors ar
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://bradgarropy.com"><img src="https://avatars.githubusercontent.com/u/11336745?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brad Garropy</b></sub></a><br /><a href="https://github.com/bradgarropy/remix-starter/commits?author=bradgarropy" title="Code">💻</a> <a href="#design-bradgarropy" title="Design">🎨</a> <a href="https://github.com/bradgarropy/remix-starter/commits?author=bradgarropy" title="Documentation">📖</a> <a href="#infra-bradgarropy" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/bradgarropy/remix-starter/commits?author=bradgarropy" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://bradgarropy.com"><img src="https://avatars.githubusercontent.com/u/11336745?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brad Garropy</b></sub></a><br /><a href="https://github.com/bradgarropy/react-router-starter/commits?author=bradgarropy" title="Code">💻</a> <a href="#design-bradgarropy" title="Design">🎨</a> <a href="https://github.com/bradgarropy/react-router-starter/commits?author=bradgarropy" title="Documentation">📖</a> <a href="#infra-bradgarropy" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/bradgarropy/react-router-starter/commits?author=bradgarropy" title="Tests">⚠️</a></td>
   </tr>
 </table>
 
@@ -101,9 +101,9 @@ I appreciate any and all types of contributions to this project! Contributors ar
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-[issues]: https://github.com/bradgarropy/remix-starter/issues
+[issues]: https://github.com/bradgarropy/react-router-starter/issues
 [codesandbox]: https://codesandbox.io
 [kcd-pr]: https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github
-[license]: https://github.com/bradgarropy/remix-starter/blob/main/license
-[fork]: https://github.com/bradgarropy/remix-starter/fork
-[contributors]: https://github.com/bradgarropy/remix-starter#-contributors
+[license]: https://github.com/bradgarropy/react-router-starter/blob/main/license
+[fork]: https://github.com/bradgarropy/react-router-starter/fork
+[contributors]: https://github.com/bradgarropy/react-router-starter#-contributors

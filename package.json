@@ -40,7 +40,7 @@
         "lint:fix": "eslint . --fix",
         "format": "prettier --check .",
         "format:fix": "prettier --write .",
-        "typecheck": "tsc",
+        "typecheck": "wrangler types && tsc",
         "test": "vitest --coverage",
         "test:ui": "vitest --coverage --watch --ui",
         "test:watch": "vitest --coverage --watch",

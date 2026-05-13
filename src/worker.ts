@@ -26,7 +26,7 @@ export default {
             })
             return await handleRemixRequest(request, loadContext)
         } catch (error) {
-            console.log(error)
+            console.error(error)
             return new Response("An unexpected error occurred", {status: 500})
         }
     },

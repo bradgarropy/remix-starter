@@ -1,3 +1,2 @@
 /// <reference types="vite/client" />
-/// <reference types="@remix-run/cloudflare" />
 /// <reference types="./worker-configuration.d.ts" />

@@ -11,6 +11,7 @@ const App = () => {
             <head>
                 <title>📍 react router starter</title>
                 <link rel="stylesheet" href={tailwindStyles} />
+                <link rel="icon" type="image/png" href="/favicon.png" />
                 <meta charSet="utf-8" />
 
                 <meta
@@ -51,6 +52,7 @@ export const ErrorBoundary = () => {
             <head>
                 <title>📍 react router starter</title>
                 <link rel="stylesheet" href={tailwindStyles} />
+                <link rel="icon" type="image/png" href="/favicon.png" />
                 <meta charSet="utf-8" />
 
                 <meta

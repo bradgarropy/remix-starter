@@ -18,6 +18,7 @@ const handleRequest = (
     responseHeaders: Headers,
     entryContext: EntryContext,
 ) => {
+    console.log("HANDLE REQUEST")
     return isbot(request.headers.get("user-agent") ?? "")
         ? handleBotRequest(
               request,

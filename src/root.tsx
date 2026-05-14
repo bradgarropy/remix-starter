@@ -1,5 +1,4 @@
-import {Links, Meta, Outlet, Scripts, ScrollRestoration} from "@remix-run/react"
-import {withSentry} from "@sentry/remix"
+import {Links, Meta, Outlet, Scripts, ScrollRestoration} from "react-router"
 
 import Error from "~/components/ErrorBoundary"
 import Footer from "~/components/Footer"
@@ -10,7 +9,7 @@ const App = () => {
     return (
         <html lang="en">
             <head>
-                <title>💿 remix starter</title>
+                <title>📍 react router starter</title>
                 <link rel="stylesheet" href={tailwindStyles} />
                 <meta charSet="utf-8" />
 
@@ -50,7 +49,7 @@ export const ErrorBoundary = () => {
     return (
         <html lang="en">
             <head>
-                <title>💿 remix starter</title>
+                <title>📍 react router starter</title>
                 <link rel="stylesheet" href={tailwindStyles} />
                 <meta charSet="utf-8" />
 
@@ -77,4 +76,4 @@ export const ErrorBoundary = () => {
     )
 }
 
-export default withSentry(App)
+export default App

@@ -1,41 +1,34 @@
-import type {AppLoadContext, EntryContext} from "@remix-run/cloudflare"
-import {RemixServer} from "@remix-run/react"
-import * as Sentry from "@sentry/remix"
+import * as Sentry from "@sentry/cloudflare"
 import {isbot} from "isbot"
 import {renderToReadableStream} from "react-dom/server"
-
-import {createRelease} from "~/utils/sentry"
+import type {EntryContext, HandleErrorFunction} from "react-router"
+import {ServerRouter} from "react-router"
 
 const streamTimeout = 5000
 
-Sentry.init({
-    dsn: process.env.VITE_SENTRY_DSN,
-    environment: process.env.NODE_ENV,
-    release: createRelease(),
-})
-
-export const handleError = Sentry.sentryHandleError
+export const handleError: HandleErrorFunction = error => {
+    Sentry.captureException(error)
+    console.error(error)
+}
 
 const handleRequest = (
     request: Request,
     responseStatusCode: number,
     responseHeaders: Headers,
-    remixContext: EntryContext,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    loadContext: AppLoadContext,
+    entryContext: EntryContext,
 ) => {
     return isbot(request.headers.get("user-agent") ?? "")
         ? handleBotRequest(
               request,
               responseStatusCode,
               responseHeaders,
-              remixContext,
+              entryContext,
           )
         : handleBrowserRequest(
               request,
               responseStatusCode,
               responseHeaders,
-              remixContext,
+              entryContext,
           )
 }
 
@@ -43,7 +36,7 @@ const handleBotRequest = async (
     request: Request,
     responseStatusCode: number,
     responseHeaders: Headers,
-    remixContext: EntryContext,
+    entryContext: EntryContext,
 ) => {
     const controller = new AbortController()
     const timeoutId = setTimeout(() => controller.abort(), streamTimeout)
@@ -51,11 +44,7 @@ const handleBotRequest = async (
     let didError = false
 
     const body = await renderToReadableStream(
-        <RemixServer
-            context={remixContext}
-            url={request.url}
-            abortDelay={streamTimeout}
-        />,
+        <ServerRouter context={entryContext} url={request.url} />,
         {
             signal: controller.signal,
             onError(error: unknown) {
@@ -82,7 +71,7 @@ const handleBrowserRequest = async (
     request: Request,
     responseStatusCode: number,
     responseHeaders: Headers,
-    remixContext: EntryContext,
+    entryContext: EntryContext,
 ) => {
     const controller = new AbortController()
     const timeoutId = setTimeout(() => controller.abort(), streamTimeout)
@@ -90,11 +79,7 @@ const handleBrowserRequest = async (
     let didError = false
 
     const body = await renderToReadableStream(
-        <RemixServer
-            context={remixContext}
-            url={request.url}
-            abortDelay={streamTimeout}
-        />,
+        <ServerRouter context={entryContext} url={request.url} />,
         {
             signal: controller.signal,
             onError(error: unknown) {
@@ -117,4 +102,3 @@ const handleBrowserRequest = async (
 }
 
 export default handleRequest
-export {streamTimeout}

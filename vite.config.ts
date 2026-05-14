@@ -1,21 +1,12 @@
-import {
-    cloudflareDevProxyVitePlugin as remixCloudflareDevProxy,
-    vitePlugin as remix,
-} from "@remix-run/dev"
+import {cloudflare} from "@cloudflare/vite-plugin"
+import {reactRouter} from "@react-router/dev/vite"
 import {sentryVitePlugin as sentry} from "@sentry/vite-plugin"
 import tailwind from "@tailwindcss/vite"
 import react from "@vitejs/plugin-react"
-import {remixDevTools} from "remix-development-tools"
+import {reactRouterDevTools} from "react-router-devtools"
 import {defineConfig} from "vitest/config"
 
-import {getLoadContext} from "./src/loadContext"
 import {createRelease} from "./src/utils/sentry"
-
-declare module "@remix-run/cloudflare" {
-    interface Future {
-        v3_singleFetch: true
-    }
-}
 
 const config = defineConfig({
     build: {
@@ -23,28 +14,10 @@ const config = defineConfig({
     },
     plugins: [
         tailwind(),
-        remixDevTools({
-            client: {
-                showBreakpointIndicator: false,
-            },
-        }),
+        reactRouterDevTools(),
         ...(process.env.VITEST
             ? [react()]
-            : [
-                  remixCloudflareDevProxy({getLoadContext}),
-                  remix({
-                      appDirectory: "src",
-                      ignoredRouteFiles: ["**/.*"],
-                      future: {
-                          v3_fetcherPersist: true,
-                          v3_relativeSplatPath: true,
-                          v3_throwAbortReason: true,
-                          v3_lazyRouteDiscovery: true,
-                          v3_singleFetch: true,
-                          v3_routeConfig: true,
-                      },
-                  }),
-              ]),
+            : [cloudflare({viteEnvironment: {name: "ssr"}}), reactRouter()]),
         process.env.SENTRY_AUTH_TOKEN
             ? sentry({
                   authToken: process.env.SENTRY_AUTH_TOKEN,
@@ -55,23 +28,17 @@ const config = defineConfig({
                       name: createRelease(),
                   },
                   sourcemaps: {
-                      filesToDeleteAfterUpload: [
-                          "build/client/**/*.map",
-                          "build/server/**/*.map",
-                      ],
+                      filesToDeleteAfterUpload: ["build/client/**/*.map"],
                   },
                   telemetry: false,
               })
             : null,
     ],
+    optimizeDeps: {
+        include: ["react-router-devtools/client"],
+    },
     resolve: {
         tsconfigPaths: true,
-        mainFields: ["browser", "module", "main"],
-    },
-    ssr: {
-        resolve: {
-            conditions: ["workerd", "worker", "browser"],
-        },
     },
     server: {
         open: true,

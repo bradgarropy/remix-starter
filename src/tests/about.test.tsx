@@ -6,6 +6,6 @@ import Route from "~/routes/about"
 test("renders", () => {
     render(<Route />)
 
-    expect(document.title).toEqual("💿 remix starter | about")
+    expect(document.title).toEqual("📍 react router starter | about")
     expect(screen.getByText("About")).toBeInTheDocument()
 })

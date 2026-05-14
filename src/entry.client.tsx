@@ -1,21 +1,19 @@
-import {RemixBrowser} from "@remix-run/react"
-import * as Sentry from "@sentry/remix"
+import * as Sentry from "@sentry/react-router"
 import {startTransition, StrictMode} from "react"
 import {hydrateRoot} from "react-dom/client"
-
-import {createRelease} from "~/utils/sentry"
+import {HydratedRouter} from "react-router/dom"
 
 Sentry.init({
     dsn: import.meta.env.VITE_SENTRY_DSN,
     environment: import.meta.env.MODE,
-    release: createRelease(),
+    sendDefaultPii: true,
 })
 
 startTransition(() => {
     hydrateRoot(
         document,
         <StrictMode>
-            <RemixBrowser />
+            <HydratedRouter />
         </StrictMode>,
     )
 })

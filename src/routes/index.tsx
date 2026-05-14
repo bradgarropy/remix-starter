@@ -1,7 +1,7 @@
 const Route = () => {
     return (
         <>
-            <title>💿 remix starter | home</title>
+            <title>📍 react router starter | home</title>
             <h2 className="text-2xl font-bold">Home</h2>
         </>
     )

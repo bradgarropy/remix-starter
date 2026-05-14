@@ -28,10 +28,7 @@ const config = defineConfig({
                       name: createRelease(),
                   },
                   sourcemaps: {
-                      filesToDeleteAfterUpload: [
-                          "build/client/**/*.map",
-                          "build/server/**/*.map",
-                      ],
+                      filesToDeleteAfterUpload: ["build/client/**/*.map"],
                   },
                   telemetry: false,
               })

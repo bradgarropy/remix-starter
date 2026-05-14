@@ -37,6 +37,9 @@ const config = defineConfig({
               })
             : null,
     ],
+    optimizeDeps: {
+        include: ["react-router-devtools/client"],
+    },
     resolve: {
         tsconfigPaths: true,
     },

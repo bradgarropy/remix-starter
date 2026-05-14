@@ -4,6 +4,7 @@ import {sentryVitePlugin as sentry} from "@sentry/vite-plugin"
 import tailwind from "@tailwindcss/vite"
 import react from "@vitejs/plugin-react"
 import {reactRouterDevTools} from "react-router-devtools"
+import devtoolsJson from "vite-plugin-devtools-json"
 import {defineConfig} from "vitest/config"
 
 import {createRelease} from "./src/utils/sentry"
@@ -14,6 +15,7 @@ const config = defineConfig({
     },
     plugins: [
         tailwind(),
+        devtoolsJson(),
         reactRouterDevTools(),
         ...(process.env.VITEST
             ? [react()]

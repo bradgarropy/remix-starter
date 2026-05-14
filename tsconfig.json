@@ -14,10 +14,18 @@
             "~/*": ["./src/*"]
         },
         "resolveJsonModule": true,
+        "rootDirs": [".", "./.react-router/types"],
         "skipLibCheck": true,
         "strict": true,
         "target": "ESNext",
         "types": []
     },
-    "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "env.d.ts"]
+    "include": [
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        ".react-router/types/**/*",
+        "env.d.ts"
+    ]
 }

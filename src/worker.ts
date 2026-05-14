@@ -27,7 +27,6 @@ const sentryHandler = Sentry.withSentry(
     env => ({
         dsn: env.SENTRY_DSN,
         sendDefaultPii: true,
-        debug: true,
     }),
     handler,
 )

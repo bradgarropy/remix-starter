@@ -1,9 +1,15 @@
+import * as Sentry from "@sentry/cloudflare"
 import {isbot} from "isbot"
 import {renderToReadableStream} from "react-dom/server"
-import type {EntryContext} from "react-router"
+import type {EntryContext, HandleErrorFunction} from "react-router"
 import {ServerRouter} from "react-router"
 
 const streamTimeout = 5000
+
+export const handleError: HandleErrorFunction = (error) => {
+    Sentry.captureException(error)
+    console.error(error)
+}
 
 const handleRequest = (
     request: Request,

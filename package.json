@@ -49,7 +49,8 @@
         "contributors": "all-contributors generate"
     },
     "dependencies": {
-        "@sentry/remix": "^10.53.0",
+        "@sentry/cloudflare": "^10.53.1",
+        "@sentry/react-router": "^10.53.1",
         "isbot": "^5.1.40",
         "react": "^19.2.6",
         "react-dom": "^19.2.6",

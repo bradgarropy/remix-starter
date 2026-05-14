@@ -1,3 +1,4 @@
+import * as Sentry from "@sentry/cloudflare"
 import {createRequestHandler} from "react-router"
 
 declare module "react-router" {
@@ -14,10 +15,20 @@ const requestHandler = createRequestHandler(
     import.meta.env.MODE,
 )
 
-export default {
+const handler = {
     fetch(request, env, ctx) {
         return requestHandler(request, {
             cloudflare: {env, ctx},
         })
     },
 } satisfies ExportedHandler<Env>
+
+const sentryHandler = Sentry.withSentry(
+    env => ({
+        dsn: env.SENTRY_DSN,
+        sendDefaultPii: true,
+    }),
+    handler,
+)
+
+export default sentryHandler

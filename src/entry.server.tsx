@@ -6,7 +6,8 @@ import {ServerRouter} from "react-router"
 
 const streamTimeout = 5000
 
-export const handleError: HandleErrorFunction = (error) => {
+export const handleError: HandleErrorFunction = error => {
+    console.log("CALLED HANDLE ERROR")
     Sentry.captureException(error)
     console.error(error)
 }

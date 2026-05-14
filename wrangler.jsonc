@@ -3,6 +3,7 @@
     "name": "react-router-starter",
     "compatibility_date": "2025-10-08",
     "compatibility_flags": ["nodejs_compat"],
+    "keep_vars": true,
     "main": "./src/worker.ts",
     "dev": {
         "port": 3000,

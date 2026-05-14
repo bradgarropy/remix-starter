@@ -1,0 +1,23 @@
+vite.config.ts
+  cb27559aa82fa3af 31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.8",
+  "base_commit_sha": "f40d4c626ce940202477f5d0158c5f2830a77813",
+  "prompts": {
+    "cb27559aa82fa3af": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1e2d0bae1ffepIJ8JdBjjW5SmW",
+        "model": "anthropic/claude-opus-4-7"
+      },
+      "human_author": "Brad Garropy",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 4,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  }
+}

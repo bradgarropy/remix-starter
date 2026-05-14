@@ -7,7 +7,6 @@ import {ServerRouter} from "react-router"
 const streamTimeout = 5000
 
 export const handleError: HandleErrorFunction = error => {
-    console.log("CALLED HANDLE ERROR")
     Sentry.captureException(error)
     console.error(error)
 }
@@ -18,7 +17,6 @@ const handleRequest = (
     responseHeaders: Headers,
     entryContext: EntryContext,
 ) => {
-    console.log("HANDLE REQUEST")
     return isbot(request.headers.get("user-agent") ?? "")
         ? handleBotRequest(
               request,

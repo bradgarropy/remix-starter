@@ -36,6 +36,12 @@ _YYYY-MM-DD_
 
 - _TBD_
 
+## [6.0.0][6.0.0]
+
+_2026-05-14_
+
+- Migrate from [Remix][remix] to [React Router][react-router]
+
 ## [5.0.0][5.0.0]
 
 _2026-05-12_
@@ -131,7 +137,9 @@ _2024-12-10_
     - [`v3_singleFetch`][v3-singleFetch]
 - Remove [`@remix-run/eslint-config`][remix-run-eslint-config]
 
-[unreleased]: https://github.com/bradgarropy/react-router-starter/compare/v4.10.2...HEAD
+[unreleased]: https://github.com/bradgarropy/react-router-starter/compare/v6.0.0...HEAD
+[6.0.0]: https://github.com/bradgarropy/react-router-starter/releases/tag/v6.0.0
+[5.0.0]: https://github.com/bradgarropy/react-router-starter/releases/tag/v5.0.0
 [4.10.2]: https://github.com/bradgarropy/react-router-starter/releases/tag/v4.10.2
 [4.10.1]: https://github.com/bradgarropy/react-router-starter/releases/tag/v4.10.1
 [4.10.0]: https://github.com/bradgarropy/react-router-starter/releases/tag/v4.10.0
@@ -169,3 +177,5 @@ _2024-12-10_
 [erasable-syntax-only]: https://typescriptlang.org/tsconfig/#erasableSyntaxOnly
 [vercel]: https://vercel.com
 [cloudflare]: https://cloudflare.com
+[remix]: https://remix.run
+[react-router]: https://reactrouter.com

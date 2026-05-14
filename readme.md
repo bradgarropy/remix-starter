@@ -31,8 +31,6 @@ _A [React Router][react-router] starter with [ESLint][eslint], [Prettier][pretti
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-<!-- TODO: Update [cloudflare] to the live Worker URL once deployed (e.g., https://react-router-starter.<subdomain>.workers.dev) -->
-
 [cloudflare]: https://dash.cloudflare.com/b70a6ce696a1cb0e9055f8213f4146ee/workers/services/view/react-router-starter/production
 [cloudflare-badge]: https://img.shields.io/badge/cloudflare-workers-orange?style=flat-square&logo=cloudflare
 [github-actions]: https://github.com/bradgarropy/react-router-starter/actions
